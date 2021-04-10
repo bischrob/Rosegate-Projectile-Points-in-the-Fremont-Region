@@ -2,7 +2,7 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
   <!-- Polyglot; journal publishes in English and Spanish -->
   <info>
-    <title>Society for American Archaeology</title>
+    <title>Society for American Archaeology RJB</title>
     <title-short>SAA</title-short>
     <id>http://www.zotero.org/styles/society-for-american-archaeology</id>
     <link href="http://www.zotero.org/styles/society-for-american-archaeology" rel="self"/>
@@ -38,7 +38,7 @@
     <choose>
       <if type="chapter paper-conference" match="none">
         <names variable="editor translator" delimiter=". ">
-          <label form="verb" prefix=" " text-case="capitalize-first" suffix=" "/>
+          <label form="verb" prefix=" " text-case="title" suffix=" "/>
           <name and="text" delimiter=", "/>
         </names>
       </if>
@@ -67,7 +67,7 @@
   <macro name="anon">
     <choose>
       <if variable="author editor translator" match="none">
-        <text term="anonymous" form="short" text-case="capitalize-first" strip-periods="true"/>
+        <text term="anonymous" form="short" text-case="title" strip-periods="true"/>
       </if>
     </choose>
   </macro>
@@ -119,7 +119,7 @@
   </macro>
   <macro name="archive">
     <group delimiter=". ">
-      <text variable="archive_location" text-case="capitalize-first"/>
+      <text variable="archive_location" text-case="title"/>
       <text variable="archive"/>
       <text variable="archive-place"/>
     </group>
@@ -179,7 +179,7 @@
           <if is-numeric="edition">
             <group delimiter=" ">
               <number variable="edition" form="ordinal"/>
-              <text term="edition" form="short"/>
+              <text term="edition" form="short" text-case="title"/>
             </group>
           </if>
           <else>
@@ -198,7 +198,7 @@
       <else-if type="bill book graphic legal_case motion_picture report song" match="any">
         <group prefix=". " delimiter=". ">
           <group>
-            <text term="volume" form="short" text-case="capitalize-first" suffix=" "/>
+            <text term="volume" form="short" text-case="title" suffix=" "/>
             <number variable="volume" form="numeric"/>
           </group>
           <group>
@@ -242,22 +242,22 @@
     <group>
       <choose>
         <if locator="page" match="none">
-          <label text-case="capitalize-first" suffix=" " variable="locator"/>
+          <label text-case="title" suffix=" " variable="locator"/>
         </if>
       </choose>
       <text variable="locator"/>
     </group>
   </macro>
   <macro name="container-prefix">
-    <text term="in" text-case="capitalize-first"/>
+    <text term="in" text-case="title"/>
   </macro>
   <macro name="container-title">
     <choose>
       <if type="chapter paper-conference" match="any">
-        <text macro="container-prefix" suffix=" "/>
+        <text macro="container-prefix" text-case="title" suffix=" "/>
       </if>
     </choose>
-    <text variable="container-title" font-style="italic"/>
+    <text variable="container-title" font-style="italic" text-case="title"/>
   </macro>
   <macro name="publisher">
     <choose>
@@ -284,8 +284,8 @@
     <date form="text" date-parts="year-month-day" variable="issued"/>
   </macro>
   <macro name="collection-title">
-    <text variable="collection-title"/>
-    <text variable="collection-number" prefix=" "/>
+    <text variable="collection-title" text-case='title' />
+    <text variable="collection-number" prefix=" " />
   </macro>
   <macro name="event">
     <group>
@@ -296,7 +296,7 @@
   <macro name="description">
     <group delimiter=". ">
       <text macro="interviewer"/>
-      <text variable="medium" text-case="capitalize-first"/>
+      <text variable="medium" text-case="title"/>
     </group>
   </macro>
   <macro name="issue">

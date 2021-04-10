@@ -11,6 +11,8 @@ output:
     pandoc_args:
       - --template=mytemplate.tex
     keep_tex: false
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Code to reproduce analysis and figures
@@ -34,6 +36,7 @@ library(umap)
 ```
 
 ## Customize ggplot themes
+
 This is a custom theme to style the dot plot.
 
 ```{r}
@@ -198,6 +201,50 @@ summary(datesLM)
 
 ## Morphometrics
 
+### Demonstration of point outline creation
+
+```{r}
+# create temporary directory to unzip images
+fn = tempdir()
+unzip("JPGs.zip",exdir = fn)
+ls = list.files(paste0(fn,"/JPGs"),pattern = "jpg",
+                full.names = T)
+# import images from jpgs
+imgs = import_jpg(ls)
+# add metadata
+fac <- tibble(Name = names(imgs),
+              Type = names(imgs) %>%
+                str_remove_all('[0-9]') %>%
+                trimws()) %>%
+  separate(Type, c("Origin","Type"), sep = "_") %>%
+  mutate(Type = case_when(Type == "Parowan Basal" ~ "Parowan", TRUE ~ Type)) %>%
+  mutate_all(factor)
+outlines = imgs %>%
+  # convert to Momocs Out object
+  Out(fac = fac) %>%
+  # center all outlines
+  coo_center() %>%
+  # smooth outlines
+  coo_smooth(100)
+# display results
+outlines %>%
+  Momocs::arrange(Type) %>%
+  panel(fac = "Type", palette = col_spring)
+# obtain corners
+corners = outlines %>%
+  # extract bottom portion
+  coo_down() %>%
+  # extract right portion
+  coo_right()
+# visualize
+corners %>% panel
+file.remove(ls)
+```
+
+As you may observe there are cases where a point on the base is shown connected to point at the top of the remaining portion of the blade. This is problematic and is caused by slight variations in the origin point for the outlines when they are created. This problem has been manually fixed for all points used in subsequent analyses.
+
+### Analysis
+
 ```{r}
 # load modified outlines
 outlines <- readRDS('AllpointscornerCombined.Rds')
@@ -344,7 +391,7 @@ ggsave('Rosegate Figure 4.jpg',
        height = 4.5, width = 6.26, dpi = 600)
 ```
 
-## Figure 5. Radiocarbon dates by median date. 
+## Figure 5. Radiocarbon dates by median date.
 
 ```{r}
 ggplot() +
@@ -364,7 +411,6 @@ ggsave('Rosegate Figure 5.jpg',
        height = 4.5, width = 6.26, dpi = 600)
 ```
 
-
 ## Figure 6. Rosegate percentages and median calibrated radiocarbon date
 
 ```{r}
@@ -377,7 +423,6 @@ ggplot(dateEstimatesMedian, aes(ADMedian, `Rosegate % of Arrow Points`)) +
 ggsave('Rosegate Figure 6.jpg',
        height = 4.5, width = 6.23, dpi = 600)
 ```
-
 
 ## Figure 7. Dot plot showing the percentage of Rosegate points to arrow points.
 
@@ -401,7 +446,7 @@ ggsave("Rosegate Figure 7.jpg", width = 6.26, height = 5, units = "in",
        dpi = 600)
 ```
 
-## Figure 10. Principal components analysis 
+## Figure 10. Principal components analysis
 
 ```{r}
 jpeg('Rosegate Figure 10.jpg', 
@@ -433,3 +478,4 @@ outlinesUMAPdf %>%
   theme(legend.position = 'bottom')
 ggsave('Rosegate Figure 11.jpg', dpi = 600, width = 6.26, units = 'in')
 ```
+
