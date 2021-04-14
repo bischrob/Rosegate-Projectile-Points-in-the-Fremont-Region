@@ -1,0 +1,498 @@
+---
+title: Rosegate Projectile Points in the Fremont Region
+author:
+   - name: Robert J. Bischoff^[School of Human Evolution and Social Change, Arizona State University, rbischoff@asu.edu]
+   - name: James R. Allison^[Department of Anthropology, Brigham Young University]
+date: "`r as.Date(Sys.time())`"
+authors:
+  - name: Robert J. Bischoff
+    department: School of Human Evolution and Social Change
+    affiliation: Arizona State University
+    location: Tempe, AZ
+    email: rbischoff@asu.edu
+  - name: James R. Allison
+    department: Department of Anthropology
+    affiliation: Brigham Young University
+keywords:
+  - Rosegate
+  - Projectile points
+  - Fremont
+  - Geometric Morphometrics
+output: 
+  bookdown::gitbook
+  rticles::arxiv_article
+
+graphics: yes
+editor_options: 
+  chunk_output_type: console
+  markdown: 
+    wrap: 72
+---
+
+# Code to Reproduce Analysis and Figures
+
+This is the R code used for analysis and to create many of the figures in the paper *Rosegate Projectile Points in the Fremont Region* by Robert J. Bischoff and James R. Allison.
+
+Note: spatial analysis and data cannot be made publicly available. Please contact the authors for more information.
+
+## Load packages
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(cache=TRUE, echo =TRUE)
+library(tidyverse)
+library(magrittr)
+library(ggthemes)
+library(rio)
+library(officer)
+library(flextable)
+library(huxtable)
+library(Bchron)
+library(osfr)
+library(Momocs)
+library(umap)
+```
+
+## Customize ggplot themes
+
+This is a custom theme to style the dot plot.
+
+```{r}
+theme_dotplot <- theme_bw(14) +
+  theme(axis.text.y = element_text(size = rel(.75)),
+        axis.ticks.y = element_blank(),
+        axis.title.x = element_text(size = rel(.75)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(size = .25, linetype = "dotted",
+                                          color = "darkgray"),
+        panel.grid.minor.x = element_blank())
+theme_set(theme_gdocs())
+```
+
+## Download the data from OSF
+
+```{r}
+# download all files from repository
+project <- osf_retrieve_node("3ufte") %>% 
+  osf_ls_files() %>% 
+  osf_download(conflicts = 'skip')
+```
+
+## Load projectile point data
+
+```{r}
+# load
+projData <- import("Fremont Projectile Point Data.xlsx",
+                   setclass = "tibble")
+# add percentages
+projData %<>% 
+  mutate(`Total Dart Points` = case_when(is.na(`Total Dart Points`) ~ 0,
+                                         TRUE ~ `Total Dart Points`),
+         ArrowPoints = `Total Projectile Points` - `Total Dart Points`, 
+         `Rosegate % of All Points` =
+           round(`Total Rosegate Points`/`Total Projectile Points`,3)*100,
+         `Rosegate % of Arrow Points` =
+           round(`Total Rosegate Points`/ArrowPoints,3)*100)
+```
+
+## Radiocarbon Analysis
+
+```{r}
+radiocarbonData <- import("Rosegate Supplemental Table 1.xlsx")
+
+# calibrate
+calib <- with(radiocarbonData,
+              BchronCalibrate(
+                ages = `Radiocarbon Age`,
+                ageSds = Error,
+                calCurves = rep('intcal20',
+                                nrow(radiocarbonData)),
+                ids = `Lab Number`))
+# get summary statistics and join to original table
+date_samples <- sampleAges(calib)
+sampleMedians <- apply(date_samples,2,median)
+# table to combine projData with radiocarbonData
+key <- structure(
+  list(
+    `Site Name` = c(
+      "Bull Creek",
+      "Backhoe Village",
+      "Baker Village",
+      "Block 49",
+      "East Fork Village",
+      "Five-Finger Ridge",
+      "Hinckley Mounds",
+      "Hinckley Mounds",
+      "Hunchback Shelter",
+      "Kays Cabin",
+      "Mosquito Willie",
+      "Paragonah",
+      "Scorpio Site",
+      "South Temple",
+      "Spotten Cave",
+      "Evans Mound",
+      "Wolf Village 1",
+      "Wolf Village 2",
+      "Woodard Mound"
+    ),
+    Site = c(
+      "Bull Creek",
+      "Backhoe Village (42SV662)",
+      "Baker Village (26WP63)",
+      "Block 49 (42SL98)",
+      "East Fork Village (42MD974)",
+      "Five Finger Ridge (42SV1686)",
+      "Hinckley Mounds 1 (42UT111)",
+      "Hinckley Mounds 2 (42UT111)",
+      "Hunchback Shelter (42BE751)",
+      "Kay's Cabin (42UT813)",
+      "Mosquito Willie (42TO137)",
+      "Paragonah (42IN43)",
+      "Scorpio Site (42WS2434)",
+      "South Temple (42SL285)",
+      "Spotten Cave (42UT104)",
+      "Summit (42IN40)",
+      "Wolf Village 1 (42UT273)",
+      "Wolf Village 2 (42UT273)",
+      "Woodard Mound (42UT102)"
+    )
+  ),
+  row.names = c(NA,-19L),
+  class = c("tbl_df",
+            "tbl", "data.frame")
+)
+dateEstimates <- apply(date_samples, 2, quantile,
+                       prob=c(0.025,0.975)) %>%
+  t() %>%
+  as_tibble(rownames = "LabNumber") %>%
+  mutate(ADStart = 1950 - `97.5%` %>% round(0),
+         ADEnd = 1950 - `2.5%` %>% round(0),
+         ADMedian = 1950 - sampleMedians %>% round(0)) %>% 
+  left_join(radiocarbonData %>% rename(LabNumber = `Lab Number`)) %>% 
+  # join to original table -- some names are different based on the names 
+  # given to the radiocarbon dates
+  left_join(key) %>% 
+  left_join(projData) %>% 
+  relocate(Site, .after = `Site Name`) %>% 
+  # Determine whether material is a short-lived species
+  mutate(Annual = case_when(
+    str_detect(Material,
+               "maize|corn|human|annual|bean") == T ~ T,
+    TRUE ~ F
+  ))
+
+# examine differences between annual dates
+AnnualDiffs <- dateEstimates %>%
+  group_by(Annual, `Site Name`) %>% 
+  summarize(ADMedian = mean(ADMedian)) %>% 
+  arrange(`Site Name`)
+
+dateEstimatesMedian <- dateEstimates %>% 
+  group_by(`Site Name`) %>% 
+  summarize(ADMedian = median(ADMedian),
+            `Rosegate % of Arrow Points` =
+              median(`Rosegate % of Arrow Points`)) %>% 
+  mutate(Annual = F) %>% 
+  bind_rows(
+    dateEstimates %>% 
+      filter(Annual == T) %>% 
+      group_by(`Site Name`, Annual) %>% 
+      summarize(ADMedian = median(ADMedian),
+                `Rosegate % of Arrow Points` =
+                  median(`Rosegate % of Arrow Points`))
+  ) %>% 
+  mutate(Annual = case_when(Annual == T ~ 'Annual',
+                            Annual == F ~ 'Combined')) %>% 
+  arrange(Annual) %>% 
+  group_by(`Site Name`) %>% 
+  distinct(ADMedian, .keep_all = T)
+dateEstimates %<>% 
+  mutate(Annual = case_when(Annual == T ~ 'Annual',
+                            Annual == F ~ 'Combined'))  %>% 
+  arrange(Annual) %>% 
+  group_by(`Site Name`) %>% 
+  distinct(ADMedian, .keep_all = T)
+# linear regression
+datesLM <- lm(ADMedian ~ `Rosegate % of Arrow Points`, data = dateEstimatesMedian)
+summary(datesLM)
+```
+
+## Morphometrics
+
+### Demonstration of point outline creation
+
+```{r}
+# create temporary directory to unzip images
+fn = tempdir()
+unzip("JPGs.zip",exdir = fn)
+ls = list.files(paste0(fn,"/JPGs"),pattern = "jpg",
+                full.names = T)
+# import images from jpgs
+imgs = import_jpg(ls)
+# add metadata
+fac <- tibble(Name = names(imgs),
+              Type = names(imgs) %>%
+                str_remove_all('[0-9]') %>%
+                trimws()) %>%
+  separate(Type, c("Origin","Type"), sep = "_") %>%
+  mutate(Type = case_when(Type == "Parowan Basal" ~ "Parowan", TRUE ~ Type)) %>%
+  mutate_all(factor)
+outlines = imgs %>%
+  # convert to Momocs Out object
+  Out(fac = fac) %>%
+  # center all outlines
+  coo_center() %>%
+  # smooth outlines
+  coo_smooth(100)
+# display results
+outlines %>%
+  Momocs::arrange(Type) %>%
+  panel(fac = "Type", palette = col_spring)
+# obtain corners
+corners = outlines %>%
+  # extract bottom portion
+  coo_down() %>%
+  # extract right portion
+  coo_right()
+# visualize
+corners %>% panel
+file.remove(ls)
+```
+
+As you may observe there are cases where a point on the base is shown connected to point at the top of the remaining portion of the blade. This is problematic and is caused by slight variations in the origin point for the outlines when they are created. This problem has been manually fixed for all points used in subsequent analyses.
+
+### Analysis
+
+```{r}
+# load modified outlines
+outlines <- readRDS('AllpointscornerCombined.Rds')
+# set number of points to use
+n <- 35
+outlinesPCA <- outlines %>%
+  coo_sample(n) %>% 
+  Ldk() %>% 
+  Momocs::fgProcrustes() %>% 
+  PCA()
+# linear discriminant analysis
+outlinesLDA <- LDA(outlinesPCA, 'Type', retain = 10)
+valid <- outlinesLDA$CV.tab %>% as.data.frame() %>% 
+  mutate(valid = actual == classified) %>% 
+  uncount(Freq) %>% 
+  summarise(valid = sum(valid) / n())
+# predictions table
+tablePredictions <- outlinesLDA$CV.tab %>% as.data.frame() %>% 
+  pivot_wider(names_from = 'classified',values_from = 'Freq') %>% 
+  mutate(accuracy = map_chr(outlinesLDA$CV.ce,~ paste0(round(.x * 100,0),"%")))
+# clustering with UMAP
+set.seed(1010) # for reproducibility
+outlinesRose <- outlinesPCA %>% 
+  Momocs::filter(Type %in% c("Eastgate","Rose Spring"))
+outlinesUMAP <- umap::umap(outlinesRose$x,
+                           labels = rownames(outlinesRose$x[,1:10]))
+outlinesUMAPdf <- outlinesUMAP$layout %>% as.data.frame() %>% 
+  rownames_to_column('Name') %>% 
+  as_tibble() %>% 
+  mutate(clusterUMAP = factor(kmeans(outlinesUMAP$layout,2)$cluster),
+         clusterPCA = factor(kmeans(outlinesRose$x,2)$cluster)) %>% 
+  left_join(outlinesRose$fac)
+```
+
+## Table 1. Fremont Projectile Point Data from this Study
+
+```{r}
+#footnotes
+a <- 
+  '$^a$Bull Creek incorporates several site numbers: 42WN226, 42WN230, 42WN231, 42WN261, 42WN326, 42WN337, 42WN991, 42WN996.'
+b <-  
+  '$^b$This site is composed of several mounds that were excavated and reported at different times.'
+footers <- c('Bull Creek','Hinckley Mounds 1 (42UT111)')
+c1 <- which(projData$Site == footers[1]) + 1
+c2 <- which(projData$Site == footers[2]) + 1
+t1 <- projData %>%
+  select(
+    Site,
+    Period,
+    `Total Projectile Points`,
+    `Total Rosegate Points`,
+    `Total Dart Points`,
+    References
+  ) %>% 
+  as_hux(add_colnames = T) %>% 
+  set_contents(c1,1,paste0(footers[1],"$^a$")) %>% 
+  set_contents(c2,1,paste0(footers[1],"$^b$")) %>% 
+  theme_article() %>% 
+  # add notes
+  huxtable::add_footnote(a) %>%
+  huxtable::add_footnote(b, border = 0) %T>% 
+  quick_xlsx(file = "Rosegate Table 1.xlsx") %T>%
+  quick_docx(file = "Rosegate Table 1.docx")
+```
+
+## Table 2. Numerical Summary of Rosegate Projectile Points by Period
+
+```{r}
+# Create table showing numerical descriptors by period.
+t2 <- projData %>%
+  rename(r = `Rosegate % of Arrow Points`, t = `Total Rosegate Points`) %>%
+  group_by(Period) %>% 
+  summarize(`Number of sites` = n(),
+            `Total Rosegate points` = sum(t),
+            `Total Rosegate %` = sum(t)/sum(ArrowPoints)*100,
+            `Mean site %` = mean(r),
+            `Median site %` = median(r),
+            `Minimum site %` = min(r),
+            `Maximum site %` = max(r)) %>% 
+  gather(Statistic, Value, -Period) %>% 
+  arrange(Period) %>%
+  spread(Period,Value) %>% 
+  mutate_if(is.numeric,round,0) %>% 
+  slice(c(5,7,6,2,3,4,1)) %>% 
+  as_hux(add_colnames = TRUE) %>% 
+  theme_article() %>% 
+  set_align(1:8,2:4,"right") %>% 
+  set_contents(1,1,"") %>% 
+  set_number_format(everywhere,4,fmt_pretty()) %T>% 
+  quick_xlsx(file = "Rosegate Table 2.xlsx") %T>% 
+  quick_docx(file = "Rosegate Table 2.docx")
+```
+
+## Table 4. Actual vs Predicted Results from a Linear Discriminants Analysis
+
+```{r}
+t4 <- tablePredictions %>% 
+  as_hux() %>% 
+  insert_row(c('','predicted type'), after = 0, fill = "") %>% 
+  insert_column(c('','','actual type'), after = 0, fill = "") %>% 
+  set_contents(2,2,"") %>% 
+  merge_cells(1,3:(ncol(tablePredictions) + 1)) %>% 
+  merge_cells(3:(nrow(tablePredictions) + 1),1) %>% 
+  set_align(1, 2:ncol(tablePredictions), "center") %>% 
+  set_align(2:nrow(tablePredictions), 1, "center") %>% 
+  set_bold(1, 2:ncol(tablePredictions)) %>% 
+  set_bold(2:nrow(tablePredictions), 1) %>% 
+  set_rotation(2:(nrow(tablePredictions) + 2), 1,90) %>%
+  theme_article() %>% 
+  set_right_border(3:(nrow(tablePredictions) + 2), 1) %>% 
+  set_bottom_border(nrow(tablePredictions) + 2, 1) %>% 
+  set_bottom_border(1,3:(ncol(tablePredictions) + 1)) %T>% 
+  quick_xlsx(file = 'Rosegate Table 4.xlsx') %T>% 
+  quick_docx(file = 'Rosegate Table 4.docx')
+```
+
+## Supplemental Table 1
+
+```{r}
+# Save Radiocarbon table
+r = nrow(radiocarbonData) + 1
+n = ncol(radiocarbonData)
+s1 <- as_hux(radiocarbonData, add_colnames = TRUE) %>% 
+  set_top_border(1,1:n,1) %>% 
+  set_bottom_border(1,1:n,1) %>% 
+  set_bottom_border(r,1:n,1) %>% 
+  set_align(1:r,2:n,"right") %T>%
+  quick_xlsx(file = "Rosegate Supplemental Table 1.xlsx") %T>%
+  quick_docx(file = "Rosegate Supplemental Table 1.docx")
+```
+
+## Figure 4. Histogram of radiocarbon dates used in this study.
+
+```{r}
+# histogram
+dateEstimates %>% 
+  ggplot() +
+  aes(ADMedian) +
+  geom_histogram(bins = 15, color = 'white') +
+  theme_gdocs() +
+  xlab('Year AD') + 
+  ylab('Radiocarbon dates')
+ggsave('Rosegate Figure 4.jpg',
+       height = 4.5, width = 6.26, dpi = 600)
+```
+
+## Figure 5. Radiocarbon dates by median date.
+
+```{r}
+ggplot() +
+  geom_point(data = dateEstimatesMedian,
+             aes(jitter(ADMedian, factor = 10),
+                 reorder(`Site Name`,ADMedian),
+                 fill = `Rosegate % of Arrow Points`,
+                 shape = Annual), size = 5) +
+  theme_dotplot + 
+  xlab('Year AD') +
+  ylab('') +
+  scale_fill_viridis_c(direction = -1) +
+  scale_shape_manual(values = c(21,24)) +
+  guides(fill = guide_colorbar('Rosegate %'), shape = guide_legend('')) +
+  theme(legend.position = 'bottom')
+ggsave('Rosegate Figure 5.jpg',
+       height = 4.5, width = 6.26, dpi = 600)
+```
+
+## Figure 6. Rosegate percentages and median calibrated radiocarbon date
+
+```{r}
+ggplot(dateEstimatesMedian, aes(ADMedian, `Rosegate % of Arrow Points`)) +
+  geom_point() + geom_smooth() +
+  theme_gdocs() +
+  xlab('Year AD') +
+  ylab('Rosegate %') +
+  coord_fixed(ylim = c(0,100))
+ggsave('Rosegate Figure 6.jpg',
+       height = 4.5, width = 6.23, dpi = 600)
+```
+
+## Figure 7. Dot plot showing the percentage of Rosegate points to arrow points.
+
+```{r echo=TRUE, fig.height=5.75, fig.width=5.75, results = 'hide'}
+projData %>% 
+  ggplot() +
+  aes(`Rosegate % of Arrow Points`,
+      reorder(Site,`Rosegate % of Arrow Points`),
+      shape = Period, fill = Period) +
+  geom_point(size = 3.5) +
+  theme_dotplot + 
+  xlab("Rosegate %") +
+  ylab("") +
+  scale_fill_viridis_d(direction = -1) +
+  scale_shape_manual(values = c(21,22,24)) + 
+  theme(legend.position = c(.85, .17),
+        legend.title = element_blank(),
+        legend.background = element_rect(color = "black"))
+
+ggsave("Rosegate Figure 7.jpg", width = 6.26, height = 5, units = "in",
+       dpi = 600)
+```
+
+## Figure 10. Principal components analysis
+
+```{r}
+jpeg('Rosegate Figure 10.jpg', 
+     width = 6.26, height = 4, units = 'in',
+     res = 600)
+plot_PCA(outlinesPCA, axes = c(1,2), zoom = 1, ~Type, labelpoints = F,
+         palette = viridis::viridis)
+dev.off()
+```
+
+## Figure 11. UMAP
+
+```{r}
+outlinesUMAPdf %>% 
+  ggplot(aes(V1,V2,
+             fill = clusterUMAP,
+             shape = Type, label = Name)) + 
+  geom_point(size = 2) +
+  scale_shape_manual(values = c(21,24)) +
+  guides(fill = guide_legend('Cluster',
+                             ncol = 2,
+                             byrow = T,
+                             override.aes = list(shape = 21)),
+         shape = guide_legend(ncol = 2,
+                              byrow = T)) +
+  scale_fill_viridis_d() +
+  xlab('') +
+  ylab('') +
+  theme(legend.position = 'bottom')
+ggsave('Rosegate Figure 11.jpg', dpi = 600, width = 6.26, units = 'in')
+```
+
