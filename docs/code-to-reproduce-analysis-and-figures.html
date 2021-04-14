@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Code to Reproduce Analysis and Figures | Rosegate Projectile Points in the Fremont Region</title>
+  <meta name="description" content="Code to Reproduce Analysis and Figures | Rosegate Projectile Points in the Fremont Region" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Code to Reproduce Analysis and Figures | Rosegate Projectile Points in the Fremont Region" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Code to Reproduce Analysis and Figures | Rosegate Projectile Points in the Fremont Region" />
+  
+  
+  
+
+
+
+<meta name="date" content="2021-04-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="references.html"/>
+
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="rosegate-projectile-points.html"><a href="rosegate-projectile-points.html"><i class="fa fa-check"></i>Rosegate Projectile Points</a></li>
+<li class="chapter" data-level="" data-path="temporal-range.html"><a href="temporal-range.html"><i class="fa fa-check"></i>Temporal Range</a></li>
+<li class="chapter" data-level="" data-path="spatial-distribution.html"><a href="spatial-distribution.html"><i class="fa fa-check"></i>Spatial Distribution</a></li>
+<li class="chapter" data-level="" data-path="rosegate-morphology.html"><a href="rosegate-morphology.html"><i class="fa fa-check"></i>Rosegate Morphology</a></li>
+<li class="chapter" data-level="" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html"><i class="fa fa-check"></i>Code to Reproduce Analysis and Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#load-packages"><i class="fa fa-check"></i>Load packages</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#customize-ggplot-themes"><i class="fa fa-check"></i>Customize ggplot themes</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#download-the-data-from-osf"><i class="fa fa-check"></i>Download the data from OSF</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#load-projectile-point-data"><i class="fa fa-check"></i>Load projectile point data</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#radiocarbon-analysis"><i class="fa fa-check"></i>Radiocarbon Analysis</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#morphometrics"><i class="fa fa-check"></i>Morphometrics</a>
+<ul>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#demonstration-of-point-outline-creation"><i class="fa fa-check"></i>Demonstration of point outline creation</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#analysis"><i class="fa fa-check"></i>Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#table-1.-fremont-projectile-point-data-from-this-study"><i class="fa fa-check"></i>Table 1. Fremont Projectile Point Data from this Study</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#table-2.-numerical-summary-of-rosegate-projectile-points-by-period"><i class="fa fa-check"></i>Table 2. Numerical Summary of Rosegate Projectile Points by Period</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#table-4.-actual-vs-predicted-results-from-a-linear-discriminants-analysis"><i class="fa fa-check"></i>Table 4. Actual vs Predicted Results from a Linear Discriminants Analysis</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#supplemental-table-1"><i class="fa fa-check"></i>Supplemental Table 1</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#figure-4.-histogram-of-radiocarbon-dates-used-in-this-study."><i class="fa fa-check"></i>Figure 4. Histogram of radiocarbon dates used in this study.</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#figure-5.-radiocarbon-dates-by-median-date."><i class="fa fa-check"></i>Figure 5. Radiocarbon dates by median date.</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#figure-6.-rosegate-percentages-and-median-calibrated-radiocarbon-date"><i class="fa fa-check"></i>Figure 6. Rosegate percentages and median calibrated radiocarbon date</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#figure-7.-dot-plot-showing-the-percentage-of-rosegate-points-to-arrow-points."><i class="fa fa-check"></i>Figure 7. Dot plot showing the percentage of Rosegate points to arrow points.</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#figure-10.-principal-components-analysis"><i class="fa fa-check"></i>Figure 10. Principal components analysis</a></li>
+<li class="chapter" data-level="" data-path="code-to-reproduce-analysis-and-figures.html"><a href="code-to-reproduce-analysis-and-figures.html#figure-11.-umap"><i class="fa fa-check"></i>Figure 11. UMAP</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Rosegate Projectile Points in the Fremont Region</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="code-to-reproduce-analysis-and-figures" class="section level1">
+<h1>Code to Reproduce Analysis and Figures</h1>
+<p>This is the R code used for analysis and to create many of the figures in the paper <em>Rosegate Projectile Points in the Fremont Region</em> by Robert J. Bischoff and James R. Allison.</p>
+<p>Note: spatial analysis and data cannot be made publicly available. Please contact the authors for more information.</p>
+<div id="load-packages" class="section level2">
+<h2>Load packages</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="code-to-reproduce-analysis-and-figures.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">cache=</span><span class="cn">TRUE</span>, <span class="at">echo =</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="code-to-reproduce-analysis-and-figures.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="code-to-reproduce-analysis-and-figures.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb1-4"><a href="code-to-reproduce-analysis-and-figures.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-5"><a href="code-to-reproduce-analysis-and-figures.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rio)</span>
+<span id="cb1-6"><a href="code-to-reproduce-analysis-and-figures.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(officer)</span>
+<span id="cb1-7"><a href="code-to-reproduce-analysis-and-figures.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
+<span id="cb1-8"><a href="code-to-reproduce-analysis-and-figures.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(huxtable)</span>
+<span id="cb1-9"><a href="code-to-reproduce-analysis-and-figures.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Bchron)</span>
+<span id="cb1-10"><a href="code-to-reproduce-analysis-and-figures.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osfr)</span>
+<span id="cb1-11"><a href="code-to-reproduce-analysis-and-figures.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Momocs)</span>
+<span id="cb1-12"><a href="code-to-reproduce-analysis-and-figures.html#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(umap)</span></code></pre></div>
+</div>
+<div id="customize-ggplot-themes" class="section level2">
+<h2>Customize ggplot themes</h2>
+<p>This is a custom theme to style the dot plot.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="code-to-reproduce-analysis-and-figures.html#cb2-1" aria-hidden="true" tabindex="-1"></a>theme_dotplot <span class="ot">&lt;-</span> <span class="fu">theme_bw</span>(<span class="dv">14</span>) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="code-to-reproduce-analysis-and-figures.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(.<span class="dv">75</span>)),</span>
+<span id="cb2-3"><a href="code-to-reproduce-analysis-and-figures.html#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-4"><a href="code-to-reproduce-analysis-and-figures.html#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(.<span class="dv">75</span>)),</span>
+<span id="cb2-5"><a href="code-to-reproduce-analysis-and-figures.html#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-6"><a href="code-to-reproduce-analysis-and-figures.html#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">size =</span> .<span class="dv">25</span>, <span class="at">linetype =</span> <span class="st">&quot;dotted&quot;</span>,</span>
+<span id="cb2-7"><a href="code-to-reproduce-analysis-and-figures.html#cb2-7" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">color =</span> <span class="st">&quot;darkgray&quot;</span>),</span>
+<span id="cb2-8"><a href="code-to-reproduce-analysis-and-figures.html#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor.x =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb2-9"><a href="code-to-reproduce-analysis-and-figures.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_gdocs</span>())</span></code></pre></div>
+</div>
+<div id="download-the-data-from-osf" class="section level2">
+<h2>Download the data from OSF</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="code-to-reproduce-analysis-and-figures.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># download all files from repository</span></span>
+<span id="cb3-2"><a href="code-to-reproduce-analysis-and-figures.html#cb3-2" aria-hidden="true" tabindex="-1"></a>project <span class="ot">&lt;-</span> <span class="fu">osf_retrieve_node</span>(<span class="st">&quot;3ufte&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="code-to-reproduce-analysis-and-figures.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">osf_ls_files</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="code-to-reproduce-analysis-and-figures.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">osf_download</span>(<span class="at">conflicts =</span> <span class="st">&#39;skip&#39;</span>)</span></code></pre></div>
+</div>
+<div id="load-projectile-point-data" class="section level2">
+<h2>Load projectile point data</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="code-to-reproduce-analysis-and-figures.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load</span></span>
+<span id="cb4-2"><a href="code-to-reproduce-analysis-and-figures.html#cb4-2" aria-hidden="true" tabindex="-1"></a>projData <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">&quot;Fremont Projectile Point Data.xlsx&quot;</span>,</span>
+<span id="cb4-3"><a href="code-to-reproduce-analysis-and-figures.html#cb4-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">setclass =</span> <span class="st">&quot;tibble&quot;</span>)</span>
+<span id="cb4-4"><a href="code-to-reproduce-analysis-and-figures.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add percentages</span></span>
+<span id="cb4-5"><a href="code-to-reproduce-analysis-and-figures.html#cb4-5" aria-hidden="true" tabindex="-1"></a>projData <span class="sc">%&lt;&gt;%</span> </span>
+<span id="cb4-6"><a href="code-to-reproduce-analysis-and-figures.html#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Total Dart Points</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(<span class="fu">is.na</span>(<span class="st">`</span><span class="at">Total Dart Points</span><span class="st">`</span>) <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb4-7"><a href="code-to-reproduce-analysis-and-figures.html#cb4-7" aria-hidden="true" tabindex="-1"></a>                                         <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">`</span><span class="at">Total Dart Points</span><span class="st">`</span>),</span>
+<span id="cb4-8"><a href="code-to-reproduce-analysis-and-figures.html#cb4-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">ArrowPoints =</span> <span class="st">`</span><span class="at">Total Projectile Points</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">Total Dart Points</span><span class="st">`</span>, </span>
+<span id="cb4-9"><a href="code-to-reproduce-analysis-and-figures.html#cb4-9" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Rosegate % of All Points</span><span class="st">`</span> <span class="ot">=</span></span>
+<span id="cb4-10"><a href="code-to-reproduce-analysis-and-figures.html#cb4-10" aria-hidden="true" tabindex="-1"></a>           <span class="fu">round</span>(<span class="st">`</span><span class="at">Total Rosegate Points</span><span class="st">`</span><span class="sc">/</span><span class="st">`</span><span class="at">Total Projectile Points</span><span class="st">`</span>,<span class="dv">3</span>)<span class="sc">*</span><span class="dv">100</span>,</span>
+<span id="cb4-11"><a href="code-to-reproduce-analysis-and-figures.html#cb4-11" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span> <span class="ot">=</span></span>
+<span id="cb4-12"><a href="code-to-reproduce-analysis-and-figures.html#cb4-12" aria-hidden="true" tabindex="-1"></a>           <span class="fu">round</span>(<span class="st">`</span><span class="at">Total Rosegate Points</span><span class="st">`</span><span class="sc">/</span>ArrowPoints,<span class="dv">3</span>)<span class="sc">*</span><span class="dv">100</span>)</span></code></pre></div>
+</div>
+<div id="radiocarbon-analysis" class="section level2">
+<h2>Radiocarbon Analysis</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="code-to-reproduce-analysis-and-figures.html#cb5-1" aria-hidden="true" tabindex="-1"></a>radiocarbonData <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">&quot;Rosegate Supplemental Table 1.xlsx&quot;</span>)</span>
+<span id="cb5-2"><a href="code-to-reproduce-analysis-and-figures.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="code-to-reproduce-analysis-and-figures.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># calibrate</span></span>
+<span id="cb5-4"><a href="code-to-reproduce-analysis-and-figures.html#cb5-4" aria-hidden="true" tabindex="-1"></a>calib <span class="ot">&lt;-</span> <span class="fu">with</span>(radiocarbonData,</span>
+<span id="cb5-5"><a href="code-to-reproduce-analysis-and-figures.html#cb5-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">BchronCalibrate</span>(</span>
+<span id="cb5-6"><a href="code-to-reproduce-analysis-and-figures.html#cb5-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">ages =</span> <span class="st">`</span><span class="at">Radiocarbon Age</span><span class="st">`</span>,</span>
+<span id="cb5-7"><a href="code-to-reproduce-analysis-and-figures.html#cb5-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">ageSds =</span> Error,</span>
+<span id="cb5-8"><a href="code-to-reproduce-analysis-and-figures.html#cb5-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">calCurves =</span> <span class="fu">rep</span>(<span class="st">&#39;intcal20&#39;</span>,</span>
+<span id="cb5-9"><a href="code-to-reproduce-analysis-and-figures.html#cb5-9" aria-hidden="true" tabindex="-1"></a>                                <span class="fu">nrow</span>(radiocarbonData)),</span>
+<span id="cb5-10"><a href="code-to-reproduce-analysis-and-figures.html#cb5-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">ids =</span> <span class="st">`</span><span class="at">Lab Number</span><span class="st">`</span>))</span>
+<span id="cb5-11"><a href="code-to-reproduce-analysis-and-figures.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># get summary statistics and join to original table</span></span>
+<span id="cb5-12"><a href="code-to-reproduce-analysis-and-figures.html#cb5-12" aria-hidden="true" tabindex="-1"></a>date_samples <span class="ot">&lt;-</span> <span class="fu">sampleAges</span>(calib)</span>
+<span id="cb5-13"><a href="code-to-reproduce-analysis-and-figures.html#cb5-13" aria-hidden="true" tabindex="-1"></a>sampleMedians <span class="ot">&lt;-</span> <span class="fu">apply</span>(date_samples,<span class="dv">2</span>,median)</span>
+<span id="cb5-14"><a href="code-to-reproduce-analysis-and-figures.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># table to combine projData with radiocarbonData</span></span>
+<span id="cb5-15"><a href="code-to-reproduce-analysis-and-figures.html#cb5-15" aria-hidden="true" tabindex="-1"></a>key <span class="ot">&lt;-</span> <span class="fu">structure</span>(</span>
+<span id="cb5-16"><a href="code-to-reproduce-analysis-and-figures.html#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb5-17"><a href="code-to-reproduce-analysis-and-figures.html#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Site Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb5-18"><a href="code-to-reproduce-analysis-and-figures.html#cb5-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Bull Creek&quot;</span>,</span>
+<span id="cb5-19"><a href="code-to-reproduce-analysis-and-figures.html#cb5-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Backhoe Village&quot;</span>,</span>
+<span id="cb5-20"><a href="code-to-reproduce-analysis-and-figures.html#cb5-20" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Baker Village&quot;</span>,</span>
+<span id="cb5-21"><a href="code-to-reproduce-analysis-and-figures.html#cb5-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Block 49&quot;</span>,</span>
+<span id="cb5-22"><a href="code-to-reproduce-analysis-and-figures.html#cb5-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;East Fork Village&quot;</span>,</span>
+<span id="cb5-23"><a href="code-to-reproduce-analysis-and-figures.html#cb5-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Five-Finger Ridge&quot;</span>,</span>
+<span id="cb5-24"><a href="code-to-reproduce-analysis-and-figures.html#cb5-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Hinckley Mounds&quot;</span>,</span>
+<span id="cb5-25"><a href="code-to-reproduce-analysis-and-figures.html#cb5-25" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Hinckley Mounds&quot;</span>,</span>
+<span id="cb5-26"><a href="code-to-reproduce-analysis-and-figures.html#cb5-26" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Hunchback Shelter&quot;</span>,</span>
+<span id="cb5-27"><a href="code-to-reproduce-analysis-and-figures.html#cb5-27" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Kays Cabin&quot;</span>,</span>
+<span id="cb5-28"><a href="code-to-reproduce-analysis-and-figures.html#cb5-28" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Mosquito Willie&quot;</span>,</span>
+<span id="cb5-29"><a href="code-to-reproduce-analysis-and-figures.html#cb5-29" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Paragonah&quot;</span>,</span>
+<span id="cb5-30"><a href="code-to-reproduce-analysis-and-figures.html#cb5-30" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Scorpio Site&quot;</span>,</span>
+<span id="cb5-31"><a href="code-to-reproduce-analysis-and-figures.html#cb5-31" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;South Temple&quot;</span>,</span>
+<span id="cb5-32"><a href="code-to-reproduce-analysis-and-figures.html#cb5-32" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Spotten Cave&quot;</span>,</span>
+<span id="cb5-33"><a href="code-to-reproduce-analysis-and-figures.html#cb5-33" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Evans Mound&quot;</span>,</span>
+<span id="cb5-34"><a href="code-to-reproduce-analysis-and-figures.html#cb5-34" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Wolf Village 1&quot;</span>,</span>
+<span id="cb5-35"><a href="code-to-reproduce-analysis-and-figures.html#cb5-35" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Wolf Village 2&quot;</span>,</span>
+<span id="cb5-36"><a href="code-to-reproduce-analysis-and-figures.html#cb5-36" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Woodard Mound&quot;</span></span>
+<span id="cb5-37"><a href="code-to-reproduce-analysis-and-figures.html#cb5-37" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-38"><a href="code-to-reproduce-analysis-and-figures.html#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">Site =</span> <span class="fu">c</span>(</span>
+<span id="cb5-39"><a href="code-to-reproduce-analysis-and-figures.html#cb5-39" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Bull Creek&quot;</span>,</span>
+<span id="cb5-40"><a href="code-to-reproduce-analysis-and-figures.html#cb5-40" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Backhoe Village (42SV662)&quot;</span>,</span>
+<span id="cb5-41"><a href="code-to-reproduce-analysis-and-figures.html#cb5-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Baker Village (26WP63)&quot;</span>,</span>
+<span id="cb5-42"><a href="code-to-reproduce-analysis-and-figures.html#cb5-42" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Block 49 (42SL98)&quot;</span>,</span>
+<span id="cb5-43"><a href="code-to-reproduce-analysis-and-figures.html#cb5-43" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;East Fork Village (42MD974)&quot;</span>,</span>
+<span id="cb5-44"><a href="code-to-reproduce-analysis-and-figures.html#cb5-44" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Five Finger Ridge (42SV1686)&quot;</span>,</span>
+<span id="cb5-45"><a href="code-to-reproduce-analysis-and-figures.html#cb5-45" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Hinckley Mounds 1 (42UT111)&quot;</span>,</span>
+<span id="cb5-46"><a href="code-to-reproduce-analysis-and-figures.html#cb5-46" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Hinckley Mounds 2 (42UT111)&quot;</span>,</span>
+<span id="cb5-47"><a href="code-to-reproduce-analysis-and-figures.html#cb5-47" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Hunchback Shelter (42BE751)&quot;</span>,</span>
+<span id="cb5-48"><a href="code-to-reproduce-analysis-and-figures.html#cb5-48" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Kay&#39;s Cabin (42UT813)&quot;</span>,</span>
+<span id="cb5-49"><a href="code-to-reproduce-analysis-and-figures.html#cb5-49" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Mosquito Willie (42TO137)&quot;</span>,</span>
+<span id="cb5-50"><a href="code-to-reproduce-analysis-and-figures.html#cb5-50" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Paragonah (42IN43)&quot;</span>,</span>
+<span id="cb5-51"><a href="code-to-reproduce-analysis-and-figures.html#cb5-51" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Scorpio Site (42WS2434)&quot;</span>,</span>
+<span id="cb5-52"><a href="code-to-reproduce-analysis-and-figures.html#cb5-52" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;South Temple (42SL285)&quot;</span>,</span>
+<span id="cb5-53"><a href="code-to-reproduce-analysis-and-figures.html#cb5-53" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Spotten Cave (42UT104)&quot;</span>,</span>
+<span id="cb5-54"><a href="code-to-reproduce-analysis-and-figures.html#cb5-54" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Summit (42IN40)&quot;</span>,</span>
+<span id="cb5-55"><a href="code-to-reproduce-analysis-and-figures.html#cb5-55" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Wolf Village 1 (42UT273)&quot;</span>,</span>
+<span id="cb5-56"><a href="code-to-reproduce-analysis-and-figures.html#cb5-56" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Wolf Village 2 (42UT273)&quot;</span>,</span>
+<span id="cb5-57"><a href="code-to-reproduce-analysis-and-figures.html#cb5-57" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Woodard Mound (42UT102)&quot;</span></span>
+<span id="cb5-58"><a href="code-to-reproduce-analysis-and-figures.html#cb5-58" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-59"><a href="code-to-reproduce-analysis-and-figures.html#cb5-59" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb5-60"><a href="code-to-reproduce-analysis-and-figures.html#cb5-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">row.names =</span> <span class="fu">c</span>(<span class="cn">NA</span>,<span class="sc">-</span>19L),</span>
+<span id="cb5-61"><a href="code-to-reproduce-analysis-and-figures.html#cb5-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">&quot;tbl_df&quot;</span>,</span>
+<span id="cb5-62"><a href="code-to-reproduce-analysis-and-figures.html#cb5-62" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;tbl&quot;</span>, <span class="st">&quot;data.frame&quot;</span>)</span>
+<span id="cb5-63"><a href="code-to-reproduce-analysis-and-figures.html#cb5-63" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-64"><a href="code-to-reproduce-analysis-and-figures.html#cb5-64" aria-hidden="true" tabindex="-1"></a>dateEstimates <span class="ot">&lt;-</span> <span class="fu">apply</span>(date_samples, <span class="dv">2</span>, quantile,</span>
+<span id="cb5-65"><a href="code-to-reproduce-analysis-and-figures.html#cb5-65" aria-hidden="true" tabindex="-1"></a>                       <span class="at">prob=</span><span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-66"><a href="code-to-reproduce-analysis-and-figures.html#cb5-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb5-67"><a href="code-to-reproduce-analysis-and-figures.html#cb5-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">&quot;LabNumber&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-68"><a href="code-to-reproduce-analysis-and-figures.html#cb5-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ADStart =</span> <span class="dv">1950</span> <span class="sc">-</span> <span class="st">`</span><span class="at">97.5%</span><span class="st">`</span> <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">0</span>),</span>
+<span id="cb5-69"><a href="code-to-reproduce-analysis-and-figures.html#cb5-69" aria-hidden="true" tabindex="-1"></a>         <span class="at">ADEnd =</span> <span class="dv">1950</span> <span class="sc">-</span> <span class="st">`</span><span class="at">2.5%</span><span class="st">`</span> <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">0</span>),</span>
+<span id="cb5-70"><a href="code-to-reproduce-analysis-and-figures.html#cb5-70" aria-hidden="true" tabindex="-1"></a>         <span class="at">ADMedian =</span> <span class="dv">1950</span> <span class="sc">-</span> sampleMedians <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-71"><a href="code-to-reproduce-analysis-and-figures.html#cb5-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(radiocarbonData <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">LabNumber =</span> <span class="st">`</span><span class="at">Lab Number</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-72"><a href="code-to-reproduce-analysis-and-figures.html#cb5-72" aria-hidden="true" tabindex="-1"></a>  <span class="co"># join to original table -- some names are different based on the names </span></span>
+<span id="cb5-73"><a href="code-to-reproduce-analysis-and-figures.html#cb5-73" aria-hidden="true" tabindex="-1"></a>  <span class="co"># given to the radiocarbon dates</span></span>
+<span id="cb5-74"><a href="code-to-reproduce-analysis-and-figures.html#cb5-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(key) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-75"><a href="code-to-reproduce-analysis-and-figures.html#cb5-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(projData) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-76"><a href="code-to-reproduce-analysis-and-figures.html#cb5-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(Site, <span class="at">.after =</span> <span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-77"><a href="code-to-reproduce-analysis-and-figures.html#cb5-77" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Determine whether material is a short-lived species</span></span>
+<span id="cb5-78"><a href="code-to-reproduce-analysis-and-figures.html#cb5-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Annual =</span> <span class="fu">case_when</span>(</span>
+<span id="cb5-79"><a href="code-to-reproduce-analysis-and-figures.html#cb5-79" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_detect</span>(Material,</span>
+<span id="cb5-80"><a href="code-to-reproduce-analysis-and-figures.html#cb5-80" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;maize|corn|human|annual|bean&quot;</span>) <span class="sc">==</span> T <span class="sc">~</span> T,</span>
+<span id="cb5-81"><a href="code-to-reproduce-analysis-and-figures.html#cb5-81" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> F</span>
+<span id="cb5-82"><a href="code-to-reproduce-analysis-and-figures.html#cb5-82" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb5-83"><a href="code-to-reproduce-analysis-and-figures.html#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-84"><a href="code-to-reproduce-analysis-and-figures.html#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="co"># examine differences between annual dates</span></span>
+<span id="cb5-85"><a href="code-to-reproduce-analysis-and-figures.html#cb5-85" aria-hidden="true" tabindex="-1"></a>AnnualDiffs <span class="ot">&lt;-</span> dateEstimates <span class="sc">%&gt;%</span></span>
+<span id="cb5-86"><a href="code-to-reproduce-analysis-and-figures.html#cb5-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Annual, <span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-87"><a href="code-to-reproduce-analysis-and-figures.html#cb5-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">ADMedian =</span> <span class="fu">mean</span>(ADMedian)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-88"><a href="code-to-reproduce-analysis-and-figures.html#cb5-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>)</span>
+<span id="cb5-89"><a href="code-to-reproduce-analysis-and-figures.html#cb5-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-90"><a href="code-to-reproduce-analysis-and-figures.html#cb5-90" aria-hidden="true" tabindex="-1"></a>dateEstimatesMedian <span class="ot">&lt;-</span> dateEstimates <span class="sc">%&gt;%</span> </span>
+<span id="cb5-91"><a href="code-to-reproduce-analysis-and-figures.html#cb5-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-92"><a href="code-to-reproduce-analysis-and-figures.html#cb5-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">ADMedian =</span> <span class="fu">median</span>(ADMedian),</span>
+<span id="cb5-93"><a href="code-to-reproduce-analysis-and-figures.html#cb5-93" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span> <span class="ot">=</span></span>
+<span id="cb5-94"><a href="code-to-reproduce-analysis-and-figures.html#cb5-94" aria-hidden="true" tabindex="-1"></a>              <span class="fu">median</span>(<span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-95"><a href="code-to-reproduce-analysis-and-figures.html#cb5-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Annual =</span> F) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-96"><a href="code-to-reproduce-analysis-and-figures.html#cb5-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(</span>
+<span id="cb5-97"><a href="code-to-reproduce-analysis-and-figures.html#cb5-97" aria-hidden="true" tabindex="-1"></a>    dateEstimates <span class="sc">%&gt;%</span> </span>
+<span id="cb5-98"><a href="code-to-reproduce-analysis-and-figures.html#cb5-98" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(Annual <span class="sc">==</span> T) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-99"><a href="code-to-reproduce-analysis-and-figures.html#cb5-99" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>, Annual) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-100"><a href="code-to-reproduce-analysis-and-figures.html#cb5-100" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarize</span>(<span class="at">ADMedian =</span> <span class="fu">median</span>(ADMedian),</span>
+<span id="cb5-101"><a href="code-to-reproduce-analysis-and-figures.html#cb5-101" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span> <span class="ot">=</span></span>
+<span id="cb5-102"><a href="code-to-reproduce-analysis-and-figures.html#cb5-102" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">median</span>(<span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>))</span>
+<span id="cb5-103"><a href="code-to-reproduce-analysis-and-figures.html#cb5-103" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-104"><a href="code-to-reproduce-analysis-and-figures.html#cb5-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Annual =</span> <span class="fu">case_when</span>(Annual <span class="sc">==</span> T <span class="sc">~</span> <span class="st">&#39;Annual&#39;</span>,</span>
+<span id="cb5-105"><a href="code-to-reproduce-analysis-and-figures.html#cb5-105" aria-hidden="true" tabindex="-1"></a>                            Annual <span class="sc">==</span> F <span class="sc">~</span> <span class="st">&#39;Combined&#39;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-106"><a href="code-to-reproduce-analysis-and-figures.html#cb5-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Annual) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-107"><a href="code-to-reproduce-analysis-and-figures.html#cb5-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-108"><a href="code-to-reproduce-analysis-and-figures.html#cb5-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(ADMedian, <span class="at">.keep_all =</span> T)</span>
+<span id="cb5-109"><a href="code-to-reproduce-analysis-and-figures.html#cb5-109" aria-hidden="true" tabindex="-1"></a>dateEstimates <span class="sc">%&lt;&gt;%</span> </span>
+<span id="cb5-110"><a href="code-to-reproduce-analysis-and-figures.html#cb5-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Annual =</span> <span class="fu">case_when</span>(Annual <span class="sc">==</span> T <span class="sc">~</span> <span class="st">&#39;Annual&#39;</span>,</span>
+<span id="cb5-111"><a href="code-to-reproduce-analysis-and-figures.html#cb5-111" aria-hidden="true" tabindex="-1"></a>                            Annual <span class="sc">==</span> F <span class="sc">~</span> <span class="st">&#39;Combined&#39;</span>))  <span class="sc">%&gt;%</span> </span>
+<span id="cb5-112"><a href="code-to-reproduce-analysis-and-figures.html#cb5-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Annual) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-113"><a href="code-to-reproduce-analysis-and-figures.html#cb5-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-114"><a href="code-to-reproduce-analysis-and-figures.html#cb5-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(ADMedian, <span class="at">.keep_all =</span> T)</span>
+<span id="cb5-115"><a href="code-to-reproduce-analysis-and-figures.html#cb5-115" aria-hidden="true" tabindex="-1"></a><span class="co"># linear regression</span></span>
+<span id="cb5-116"><a href="code-to-reproduce-analysis-and-figures.html#cb5-116" aria-hidden="true" tabindex="-1"></a>datesLM <span class="ot">&lt;-</span> <span class="fu">lm</span>(ADMedian <span class="sc">~</span> <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>, <span class="at">data =</span> dateEstimatesMedian)</span>
+<span id="cb5-117"><a href="code-to-reproduce-analysis-and-figures.html#cb5-117" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datesLM)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = ADMedian ~ `Rosegate % of Arrow Points`, data = dateEstimatesMedian)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -234.731  -61.675   -4.138   87.749  166.661 
+## 
+## Coefficients:
+##                               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                  1139.7257    39.6962  28.711  &lt; 2e-16 ***
+## `Rosegate % of Arrow Points`   -2.0885     0.7148  -2.922  0.00815 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 99.58 on 21 degrees of freedom
+## Multiple R-squared:  0.289,  Adjusted R-squared:  0.2552 
+## F-statistic: 8.537 on 1 and 21 DF,  p-value: 0.00815</code></pre>
+</div>
+<div id="morphometrics" class="section level2">
+<h2>Morphometrics</h2>
+<div id="demonstration-of-point-outline-creation" class="section level3">
+<h3>Demonstration of point outline creation</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="code-to-reproduce-analysis-and-figures.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create temporary directory to unzip images</span></span>
+<span id="cb7-2"><a href="code-to-reproduce-analysis-and-figures.html#cb7-2" aria-hidden="true" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
+<span id="cb7-3"><a href="code-to-reproduce-analysis-and-figures.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(<span class="st">&quot;JPGs.zip&quot;</span>,<span class="at">exdir =</span> fn)</span>
+<span id="cb7-4"><a href="code-to-reproduce-analysis-and-figures.html#cb7-4" aria-hidden="true" tabindex="-1"></a>ls <span class="ot">=</span> <span class="fu">list.files</span>(<span class="fu">paste0</span>(fn,<span class="st">&quot;/JPGs&quot;</span>),<span class="at">pattern =</span> <span class="st">&quot;jpg&quot;</span>,</span>
+<span id="cb7-5"><a href="code-to-reproduce-analysis-and-figures.html#cb7-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">full.names =</span> T)</span>
+<span id="cb7-6"><a href="code-to-reproduce-analysis-and-figures.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># import images from jpgs</span></span>
+<span id="cb7-7"><a href="code-to-reproduce-analysis-and-figures.html#cb7-7" aria-hidden="true" tabindex="-1"></a>imgs <span class="ot">=</span> <span class="fu">import_jpg</span>(ls)</span></code></pre></div>
+<pre><code>## [ 1 / 242 ]  Baker Village_Rosegate 1.jpg
+## [ 2 / 242 ]  Baker Village_Rosegate 2.jpg
+## [ 3 / 242 ]  Baker Village_Rosegate 3.jpg
+## [ 4 / 242 ]  Baker Village_Rosegate 4.jpg
+## [ 5 / 242 ]  Baker Village_Rosegate 5.jpg
+## [ 6 / 242 ]  Baker Village_Rosegate 6.jpg
+## [ 7 / 242 ]  Baker Village_side notch 1.jpg
+## [ 8 / 242 ]  Baker Village_side notch 2.jpg
+## [ 9 / 242 ]  Baker Village_side notch 3.jpg
+## [ 10 / 242 ]  Baker Village_side notch 4.jpg
+## [ 11 / 242 ]  Baker Village_side notch 5.jpg
+## [ 12 / 242 ]  Baker Village_unclassified 1.jpg
+## [ 13 / 242 ]  Holmer and Weder_Eastgate 1.jpg
+## [ 14 / 242 ]  Holmer and Weder_Eastgate 2.jpg
+## [ 15 / 242 ]  Holmer and Weder_Parowan 1.jpg
+## [ 16 / 242 ]  Holmer and Weder_Parowan 2.jpg
+## [ 17 / 242 ]  Holmer and Weder_Parowan 3.jpg
+## [ 18 / 242 ]  Holmer and Weder_Rose Spring 1.jpg
+## [ 19 / 242 ]  Holmer and Weder_Rose Spring 2.jpg
+## [ 20 / 242 ]  Holmer and Weder_Rose Spring 3.jpg
+## [ 21 / 242 ]  Hunchback Shelter_Eastgate 1.jpg
+## [ 22 / 242 ]  Hunchback Shelter_Eastgate 2.jpg
+## [ 23 / 242 ]  Hunchback Shelter_Eastgate 3.jpg
+## [ 24 / 242 ]  Hunchback Shelter_Eastgate 4.jpg
+## [ 25 / 242 ]  Hunchback Shelter_Eastgate 5.jpg
+## [ 26 / 242 ]  Hunchback Shelter_Eastgate 6.jpg
+## [ 27 / 242 ]  Hunchback Shelter_Elko Corner 1.jpg
+## [ 28 / 242 ]  Hunchback Shelter_Elko Corner 2.jpg
+## [ 29 / 242 ]  Hunchback Shelter_Elko Corner 3.jpg
+## [ 30 / 242 ]  Hunchback Shelter_Elko Corner 4.jpg
+## [ 31 / 242 ]  Hunchback Shelter_Elko Side 1.jpg
+## [ 32 / 242 ]  Hunchback Shelter_Elko Side 2.jpg
+## [ 33 / 242 ]  Hunchback Shelter_Elko Side 3.jpg
+## [ 34 / 242 ]  Hunchback Shelter_Elko Side 4.jpg
+## [ 35 / 242 ]  Hunchback Shelter_Elko Side 5.jpg
+## [ 36 / 242 ]  Hunchback Shelter_Gypsum 1.jpg
+## [ 37 / 242 ]  Hunchback Shelter_Parowan Basal 1.jpg
+## [ 38 / 242 ]  Hunchback Shelter_Parowan Basal 2.jpg
+## [ 39 / 242 ]  Hunchback Shelter_Parowan Basal 3.jpg
+## [ 40 / 242 ]  Hunchback Shelter_Parowan Basal 4.jpg
+## [ 41 / 242 ]  Hunchback Shelter_Parowan Basal 5.jpg
+## [ 42 / 242 ]  Hunchback Shelter_Rose Spring 1.jpg
+## [ 43 / 242 ]  Hunchback Shelter_Rose Spring 10.jpg
+## [ 44 / 242 ]  Hunchback Shelter_Rose Spring 11.jpg
+## [ 45 / 242 ]  Hunchback Shelter_Rose Spring 12.jpg
+## [ 46 / 242 ]  Hunchback Shelter_Rose Spring 13.jpg
+## [ 47 / 242 ]  Hunchback Shelter_Rose Spring 14.jpg
+## [ 48 / 242 ]  Hunchback Shelter_Rose Spring 15.jpg
+## [ 49 / 242 ]  Hunchback Shelter_Rose Spring 16.jpg
+## [ 50 / 242 ]  Hunchback Shelter_Rose Spring 17.jpg
+## [ 51 / 242 ]  Hunchback Shelter_Rose Spring 18.jpg
+## [ 52 / 242 ]  Hunchback Shelter_Rose Spring 19.jpg
+## [ 53 / 242 ]  Hunchback Shelter_Rose Spring 2.jpg
+## [ 54 / 242 ]  Hunchback Shelter_Rose Spring 20.jpg
+## [ 55 / 242 ]  Hunchback Shelter_Rose Spring 21.jpg
+## [ 56 / 242 ]  Hunchback Shelter_Rose Spring 22.jpg
+## [ 57 / 242 ]  Hunchback Shelter_Rose Spring 23.jpg
+## [ 58 / 242 ]  Hunchback Shelter_Rose Spring 24.jpg
+## [ 59 / 242 ]  Hunchback Shelter_Rose Spring 25.jpg
+## [ 60 / 242 ]  Hunchback Shelter_Rose Spring 26.jpg
+## [ 61 / 242 ]  Hunchback Shelter_Rose Spring 27.jpg
+## [ 62 / 242 ]  Hunchback Shelter_Rose Spring 28.jpg
+## [ 63 / 242 ]  Hunchback Shelter_Rose Spring 29.jpg
+## [ 64 / 242 ]  Hunchback Shelter_Rose Spring 3.jpg
+## [ 65 / 242 ]  Hunchback Shelter_Rose Spring 30.jpg
+## [ 66 / 242 ]  Hunchback Shelter_Rose Spring 31.jpg
+## [ 67 / 242 ]  Hunchback Shelter_Rose Spring 32.jpg
+## [ 68 / 242 ]  Hunchback Shelter_Rose Spring 33.jpg
+## [ 69 / 242 ]  Hunchback Shelter_Rose Spring 34.jpg
+## [ 70 / 242 ]  Hunchback Shelter_Rose Spring 35.jpg
+## [ 71 / 242 ]  Hunchback Shelter_Rose Spring 36.jpg
+## [ 72 / 242 ]  Hunchback Shelter_Rose Spring 37.jpg
+## [ 73 / 242 ]  Hunchback Shelter_Rose Spring 38.jpg
+## [ 74 / 242 ]  Hunchback Shelter_Rose Spring 39.jpg
+## [ 75 / 242 ]  Hunchback Shelter_Rose Spring 4.jpg
+## [ 76 / 242 ]  Hunchback Shelter_Rose Spring 40.jpg
+## [ 77 / 242 ]  Hunchback Shelter_Rose Spring 41.jpg
+## [ 78 / 242 ]  Hunchback Shelter_Rose Spring 42.jpg
+## [ 79 / 242 ]  Hunchback Shelter_Rose Spring 43.jpg
+## [ 80 / 242 ]  Hunchback Shelter_Rose Spring 44.jpg
+## [ 81 / 242 ]  Hunchback Shelter_Rose Spring 45.jpg
+## [ 82 / 242 ]  Hunchback Shelter_Rose Spring 46.jpg
+## [ 83 / 242 ]  Hunchback Shelter_Rose Spring 47.jpg
+## [ 84 / 242 ]  Hunchback Shelter_Rose Spring 48.jpg
+## [ 85 / 242 ]  Hunchback Shelter_Rose Spring 49.jpg
+## [ 86 / 242 ]  Hunchback Shelter_Rose Spring 5.jpg
+## [ 87 / 242 ]  Hunchback Shelter_Rose Spring 50.jpg
+## [ 88 / 242 ]  Hunchback Shelter_Rose Spring 51.jpg
+## [ 89 / 242 ]  Hunchback Shelter_Rose Spring 52.jpg
+## [ 90 / 242 ]  Hunchback Shelter_Rose Spring 53.jpg
+## [ 91 / 242 ]  Hunchback Shelter_Rose Spring 54.jpg
+## [ 92 / 242 ]  Hunchback Shelter_Rose Spring 55.jpg
+## [ 93 / 242 ]  Hunchback Shelter_Rose Spring 56.jpg
+## [ 94 / 242 ]  Hunchback Shelter_Rose Spring 57.jpg
+## [ 95 / 242 ]  Hunchback Shelter_Rose Spring 58.jpg
+## [ 96 / 242 ]  Hunchback Shelter_Rose Spring 59.jpg
+## [ 97 / 242 ]  Hunchback Shelter_Rose Spring 6.jpg
+## [ 98 / 242 ]  Hunchback Shelter_Rose Spring 60.jpg
+## [ 99 / 242 ]  Hunchback Shelter_Rose Spring 61.jpg
+## [ 100 / 242 ]  Hunchback Shelter_Rose Spring 62.jpg
+## [ 101 / 242 ]  Hunchback Shelter_Rose Spring 63.jpg
+## [ 102 / 242 ]  Hunchback Shelter_Rose Spring 7.jpg
+## [ 103 / 242 ]  Hunchback Shelter_Rose Spring 8.jpg
+## [ 104 / 242 ]  Hunchback Shelter_Rose Spring 9.jpg
+## [ 105 / 242 ]  Hunchback Shelter_Rosegate 1.jpg
+## [ 106 / 242 ]  Hunchback Shelter_Rosegate 2.jpg
+## [ 107 / 242 ]  Hunchback Shelter_Rosegate 3.jpg
+## [ 108 / 242 ]  Hunchback Shelter_Rosegate 4.jpg
+## [ 109 / 242 ]  Hunchback Shelter_Rosegate 5.jpg
+## [ 110 / 242 ]  Hunchback Shelter_Rosegate 6.jpg
+## [ 111 / 242 ]  Justice_Eastgate 01.jpg
+## [ 112 / 242 ]  Justice_Eastgate 02.jpg
+## [ 113 / 242 ]  Justice_Eastgate 03.jpg
+## [ 114 / 242 ]  Justice_Eastgate 04.jpg
+## [ 115 / 242 ]  Justice_Eastgate 05.jpg
+## [ 116 / 242 ]  Justice_Eastgate 06.jpg
+## [ 117 / 242 ]  Justice_Eastgate 07.jpg
+## [ 118 / 242 ]  Justice_Eastgate 08.jpg
+## [ 119 / 242 ]  Justice_Eastgate 09.jpg
+## [ 120 / 242 ]  Justice_Eastgate 10.jpg
+## [ 121 / 242 ]  Justice_Eastgate 11.jpg
+## [ 122 / 242 ]  Justice_Eastgate 12.jpg
+## [ 123 / 242 ]  Justice_Eastgate_01.jpg
+## [ 124 / 242 ]  Justice_Eastgate_02.jpg
+## [ 125 / 242 ]  Justice_Eastgate_03.jpg
+## [ 126 / 242 ]  Justice_Eastgate_04.jpg
+## [ 127 / 242 ]  Justice_Eastgate_05.jpg
+## [ 128 / 242 ]  Justice_Eastgate_06.jpg
+## [ 129 / 242 ]  Justice_Eastgate_07.jpg
+## [ 130 / 242 ]  Justice_Eastgate_08.jpg
+## [ 131 / 242 ]  Justice_Eastgate_09.jpg
+## [ 132 / 242 ]  Justice_Eastgate_10.jpg
+## [ 133 / 242 ]  Justice_Eastgate_11.jpg
+## [ 134 / 242 ]  Justice_Eastgate_12.jpg
+## [ 135 / 242 ]  Justice_Rose Spring 01.jpg
+## [ 136 / 242 ]  Justice_Rose Spring 02.jpg
+## [ 137 / 242 ]  Justice_Rose Spring 03.jpg
+## [ 138 / 242 ]  Justice_Rose Spring 04.jpg
+## [ 139 / 242 ]  Justice_Rose Spring 05.jpg
+## [ 140 / 242 ]  Justice_Rose Spring 06.jpg
+## [ 141 / 242 ]  Justice_Rose Spring 07.jpg
+## [ 142 / 242 ]  Justice_Rose Spring 08.jpg
+## [ 143 / 242 ]  Justice_Rose Spring 09.jpg
+## [ 144 / 242 ]  Justice_Rose Spring 10.jpg
+## [ 145 / 242 ]  Justice_Rose Spring 11.jpg
+## [ 146 / 242 ]  Justice_Rose Spring 12.jpg
+## [ 147 / 242 ]  Justice_Rose Spring 13.jpg
+## [ 148 / 242 ]  Justice_Rose Spring 14.jpg
+## [ 149 / 242 ]  Justice_Rose Spring_01.jpg
+## [ 150 / 242 ]  Justice_Rose Spring_02.jpg
+## [ 151 / 242 ]  Justice_Rose Spring_03.jpg
+## [ 152 / 242 ]  Justice_Rose Spring_04.jpg
+## [ 153 / 242 ]  Justice_Rose Spring_05.jpg
+## [ 154 / 242 ]  Justice_Rose Spring_06.jpg
+## [ 155 / 242 ]  Justice_Rose Spring_07.jpg
+## [ 156 / 242 ]  Justice_Rose Spring_08.jpg
+## [ 157 / 242 ]  Justice_Rose Spring_09.jpg
+## [ 158 / 242 ]  Justice_Rose Spring_10.jpg
+## [ 159 / 242 ]  Justice_Rose Spring_11.jpg
+## [ 160 / 242 ]  Justice_Rose Spring_12.jpg
+## [ 161 / 242 ]  Justice_Rose Spring_13.jpg
+## [ 162 / 242 ]  Justice_Rose Spring_14.jpg
+## [ 163 / 242 ]  Parowan Valley_Eastgate 1.jpg
+## [ 164 / 242 ]  Parowan Valley_Eastgate 2.jpg
+## [ 165 / 242 ]  Parowan Valley_Parowan 1.jpg
+## [ 166 / 242 ]  Parowan Valley_Parowan 2.jpg
+## [ 167 / 242 ]  Parowan Valley_Parowan 3.jpg
+## [ 168 / 242 ]  Parowan Valley_Parowan 4.jpg
+## [ 169 / 242 ]  Parowan Valley_Parowan 5.jpg
+## [ 170 / 242 ]  Parowan Valley_Parowan 6.jpg
+## [ 171 / 242 ]  Parowan Valley_Parowan 7.jpg
+## [ 172 / 242 ]  Parowan Valley_Parowan 8.jpg
+## [ 173 / 242 ]  Parowan Valley_Parowan 9.jpg
+## [ 174 / 242 ]  Parowan Valley_Rose Spring 1.jpg
+## [ 175 / 242 ]  Parowan Valley_Rose Spring 2.jpg
+## [ 176 / 242 ]  Parowan Valley_Rose Spring 3.jpg
+## [ 177 / 242 ]  Parowan Valley_Rose Spring 4.jpg
+## [ 178 / 242 ]  Parowan Valley_Rose Spring 5.jpg
+## [ 179 / 242 ]  Parowan Valley_Rose Spring 6.jpg
+## [ 180 / 242 ]  Parowan Valley_Rosegate 1.jpg
+## [ 181 / 242 ]  Parowan Valley_Rosegate 2.jpg
+## [ 182 / 242 ]  Radford Roost_Parowan 1.jpg
+## [ 183 / 242 ]  Radford Roost_Parowan 2.jpg
+## [ 184 / 242 ]  Radford Roost_Rosegate 1.jpg
+## [ 185 / 242 ]  Radford Roost_Rosegate 10.jpg
+## [ 186 / 242 ]  Radford Roost_Rosegate 11.jpg
+## [ 187 / 242 ]  Radford Roost_Rosegate 12.jpg
+## [ 188 / 242 ]  Radford Roost_Rosegate 13.jpg
+## [ 189 / 242 ]  Radford Roost_Rosegate 2.jpg
+## [ 190 / 242 ]  Radford Roost_Rosegate 3.jpg
+## [ 191 / 242 ]  Radford Roost_Rosegate 4.jpg
+## [ 192 / 242 ]  Radford Roost_Rosegate 5.jpg
+## [ 193 / 242 ]  Radford Roost_Rosegate 6.jpg
+## [ 194 / 242 ]  Radford Roost_Rosegate 7.jpg
+## [ 195 / 242 ]  Radford Roost_Rosegate 8.jpg
+## [ 196 / 242 ]  Radford Roost_Rosegate 9.jpg
+## [ 197 / 242 ]  South Temple_Cottonwood 1.jpg
+## [ 198 / 242 ]  South Temple_Cottonwood 2.jpg
+## [ 199 / 242 ]  South Temple_Desert 1.jpg
+## [ 200 / 242 ]  South Temple_Desert 2.jpg
+## [ 201 / 242 ]  South Temple_Rose Spring 1.jpg
+## [ 202 / 242 ]  South Temple_Rose Spring 2.jpg
+## [ 203 / 242 ]  South Temple_Rose Spring 3.jpg
+## [ 204 / 242 ]  South Temple_Rose Spring 4.jpg
+## [ 205 / 242 ]  South Temple_Rose Spring 5.jpg
+## [ 206 / 242 ]  South Temple_Rose Spring 6.jpg
+## [ 207 / 242 ]  South Temple_Rose Spring 7.jpg
+## [ 208 / 242 ]  South Temple_Rose Spring 8.jpg
+## [ 209 / 242 ]  South Temple_Rose Spring 9.jpg
+## [ 210 / 242 ]  Wolf Village_Rosegate 1.jpg
+## [ 211 / 242 ]  Wolf Village_Rosegate 10.jpg
+## [ 212 / 242 ]  Wolf Village_Rosegate 11.jpg
+## [ 213 / 242 ]  Wolf Village_Rosegate 12.jpg
+## [ 214 / 242 ]  Wolf Village_Rosegate 13.jpg
+## [ 215 / 242 ]  Wolf Village_Rosegate 14.jpg
+## [ 216 / 242 ]  Wolf Village_Rosegate 15.jpg
+## [ 217 / 242 ]  Wolf Village_Rosegate 16.jpg
+## [ 218 / 242 ]  Wolf Village_Rosegate 17.jpg
+## [ 219 / 242 ]  Wolf Village_Rosegate 18.jpg
+## [ 220 / 242 ]  Wolf Village_Rosegate 19.jpg
+## [ 221 / 242 ]  Wolf Village_Rosegate 2.jpg
+## [ 222 / 242 ]  Wolf Village_Rosegate 20.jpg
+## [ 223 / 242 ]  Wolf Village_Rosegate 21.jpg
+## [ 224 / 242 ]  Wolf Village_Rosegate 22.jpg
+## [ 225 / 242 ]  Wolf Village_Rosegate 23.jpg
+## [ 226 / 242 ]  Wolf Village_Rosegate 24.jpg
+## [ 227 / 242 ]  Wolf Village_Rosegate 25.jpg
+## [ 228 / 242 ]  Wolf Village_Rosegate 26.jpg
+## [ 229 / 242 ]  Wolf Village_Rosegate 27.jpg
+## [ 230 / 242 ]  Wolf Village_Rosegate 28.jpg
+## [ 231 / 242 ]  Wolf Village_Rosegate 29.jpg
+## [ 232 / 242 ]  Wolf Village_Rosegate 3.jpg
+## [ 233 / 242 ]  Wolf Village_Rosegate 30.jpg
+## [ 234 / 242 ]  Wolf Village_Rosegate 32.jpg
+## [ 235 / 242 ]  Wolf Village_Rosegate 33.jpg
+## [ 236 / 242 ]  Wolf Village_Rosegate 34.jpg
+## [ 237 / 242 ]  Wolf Village_Rosegate 4.jpg
+## [ 238 / 242 ]  Wolf Village_Rosegate 5.jpg
+## [ 239 / 242 ]  Wolf Village_Rosegate 6.jpg
+## [ 240 / 242 ]  Wolf Village_Rosegate 7.jpg
+## [ 241 / 242 ]  Wolf Village_Rosegate 8.jpg
+## [ 242 / 242 ]  Wolf Village_Rosegate 9.jpg</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="code-to-reproduce-analysis-and-figures.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add metadata</span></span>
+<span id="cb9-2"><a href="code-to-reproduce-analysis-and-figures.html#cb9-2" aria-hidden="true" tabindex="-1"></a>fac <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">Name =</span> <span class="fu">names</span>(imgs),</span>
+<span id="cb9-3"><a href="code-to-reproduce-analysis-and-figures.html#cb9-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">Type =</span> <span class="fu">names</span>(imgs) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="code-to-reproduce-analysis-and-figures.html#cb9-4" aria-hidden="true" tabindex="-1"></a>                <span class="fu">str_remove_all</span>(<span class="st">&#39;[0-9]&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="code-to-reproduce-analysis-and-figures.html#cb9-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">trimws</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="code-to-reproduce-analysis-and-figures.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Type, <span class="fu">c</span>(<span class="st">&quot;Origin&quot;</span>,<span class="st">&quot;Type&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="code-to-reproduce-analysis-and-figures.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> <span class="fu">case_when</span>(Type <span class="sc">==</span> <span class="st">&quot;Parowan Basal&quot;</span> <span class="sc">~</span> <span class="st">&quot;Parowan&quot;</span>, <span class="cn">TRUE</span> <span class="sc">~</span> Type)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="code-to-reproduce-analysis-and-figures.html#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_all</span>(factor)</span>
+<span id="cb9-9"><a href="code-to-reproduce-analysis-and-figures.html#cb9-9" aria-hidden="true" tabindex="-1"></a>outlines <span class="ot">=</span> imgs <span class="sc">%&gt;%</span></span>
+<span id="cb9-10"><a href="code-to-reproduce-analysis-and-figures.html#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># convert to Momocs Out object</span></span>
+<span id="cb9-11"><a href="code-to-reproduce-analysis-and-figures.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Out</span>(<span class="at">fac =</span> fac) <span class="sc">%&gt;%</span></span>
+<span id="cb9-12"><a href="code-to-reproduce-analysis-and-figures.html#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># center all outlines</span></span>
+<span id="cb9-13"><a href="code-to-reproduce-analysis-and-figures.html#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coo_center</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb9-14"><a href="code-to-reproduce-analysis-and-figures.html#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># smooth outlines</span></span>
+<span id="cb9-15"><a href="code-to-reproduce-analysis-and-figures.html#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coo_smooth</span>(<span class="dv">100</span>)</span>
+<span id="cb9-16"><a href="code-to-reproduce-analysis-and-figures.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># display results</span></span>
+<span id="cb9-17"><a href="code-to-reproduce-analysis-and-figures.html#cb9-17" aria-hidden="true" tabindex="-1"></a>outlines <span class="sc">%&gt;%</span></span>
+<span id="cb9-18"><a href="code-to-reproduce-analysis-and-figures.html#cb9-18" aria-hidden="true" tabindex="-1"></a>  Momocs<span class="sc">::</span><span class="fu">arrange</span>(Type) <span class="sc">%&gt;%</span></span>
+<span id="cb9-19"><a href="code-to-reproduce-analysis-and-figures.html#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">panel</span>(<span class="at">fac =</span> <span class="st">&quot;Type&quot;</span>, <span class="at">palette =</span> col_spring)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="code-to-reproduce-analysis-and-figures.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># obtain corners</span></span>
+<span id="cb10-2"><a href="code-to-reproduce-analysis-and-figures.html#cb10-2" aria-hidden="true" tabindex="-1"></a>corners <span class="ot">=</span> outlines <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="code-to-reproduce-analysis-and-figures.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># extract bottom portion</span></span>
+<span id="cb10-4"><a href="code-to-reproduce-analysis-and-figures.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coo_down</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="code-to-reproduce-analysis-and-figures.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># extract right portion</span></span>
+<span id="cb10-6"><a href="code-to-reproduce-analysis-and-figures.html#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coo_right</span>()</span>
+<span id="cb10-7"><a href="code-to-reproduce-analysis-and-figures.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># visualize</span></span>
+<span id="cb10-8"><a href="code-to-reproduce-analysis-and-figures.html#cb10-8" aria-hidden="true" tabindex="-1"></a>corners <span class="sc">%&gt;%</span> panel</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="code-to-reproduce-analysis-and-figures.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file.remove</span>(ls)</span></code></pre></div>
+<pre><code>##   [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+##  [16] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+##  [31] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+##  [46] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+##  [61] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+##  [76] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+##  [91] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [106] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [121] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [136] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [151] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [166] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [181] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [196] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [211] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [226] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+## [241] TRUE TRUE</code></pre>
+<p>As you may observe there are cases where a point on the base is shown connected to point at the top of the remaining portion of the blade. This is problematic and is caused by slight variations in the origin point for the outlines when they are created. This problem has been manually fixed for all points used in subsequent analyses.</p>
+</div>
+<div id="analysis" class="section level3">
+<h3>Analysis</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="code-to-reproduce-analysis-and-figures.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load modified outlines</span></span>
+<span id="cb13-2"><a href="code-to-reproduce-analysis-and-figures.html#cb13-2" aria-hidden="true" tabindex="-1"></a>outlines <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&#39;AllpointscornerCombined.Rds&#39;</span>)</span>
+<span id="cb13-3"><a href="code-to-reproduce-analysis-and-figures.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># set number of points to use</span></span>
+<span id="cb13-4"><a href="code-to-reproduce-analysis-and-figures.html#cb13-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">35</span></span>
+<span id="cb13-5"><a href="code-to-reproduce-analysis-and-figures.html#cb13-5" aria-hidden="true" tabindex="-1"></a>outlinesPCA <span class="ot">&lt;-</span> outlines <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="code-to-reproduce-analysis-and-figures.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coo_sample</span>(n) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-7"><a href="code-to-reproduce-analysis-and-figures.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Ldk</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb13-8"><a href="code-to-reproduce-analysis-and-figures.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  Momocs<span class="sc">::</span><span class="fu">fgProcrustes</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb13-9"><a href="code-to-reproduce-analysis-and-figures.html#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">PCA</span>()</span></code></pre></div>
+<pre><code>## iteration:  1    gain: 1228400 
+## iteration:  2    gain: 64.636 
+## iteration:  3    gain: 11.835 
+## iteration:  4    gain: 1.7792 
+## iteration:  5    gain: 10.262 
+## iteration:  6    gain: 3.5208 
+## iteration:  7    gain: 1.5338 
+## iteration:  8    gain: 0.29681 
+## iteration:  9    gain: 1.0588 
+## iteration:  10   gain: 0.70247 
+## iteration:  11   gain: 0.13943 
+## iteration:  12   gain: 0.0070079 
+## iteration:  13   gain: 0.025988 
+## iteration:  14   gain: 0.058245 
+## iteration:  15   gain: 0.051543 
+## iteration:  16   gain: 0.0088052 
+## iteration:  17   gain: 0.021638 
+## iteration:  18   gain: 0.024221 
+## iteration:  19   gain: 0.013105 
+## iteration:  20   gain: 0.0019754 
+## iteration:  21   gain: 0.0042918 
+## iteration:  22   gain: 0.0055256 
+## iteration:  23   gain: 0.0035034 
+## iteration:  24   gain: 0.0007007 
+## iteration:  25   gain: 0.0010955 
+## iteration:  26   gain: 0.0014646 
+## iteration:  27   gain: 0.00093205 
+## iteration:  28   gain: 0.00020981 
+## iteration:  29   gain: 0.00025777 
+## iteration:  30   gain: 0.00037022 
+## iteration:  31   gain: 0.00024702 
+## iteration:  32   gain: 6.3535e-05 
+## iteration:  33   gain: 6.0963e-05 
+## iteration:  34   gain: 9.4512e-05 
+## iteration:  35   gain: 6.5441e-05 
+## iteration:  36   gain: 1.8752e-05 
+## iteration:  37   gain: 1.4129e-05 
+## iteration:  38   gain: 2.3968e-05 
+## iteration:  39   gain: 1.7293e-05 
+## iteration:  40   gain: 5.4693e-06 
+## iteration:  41   gain: 3.2117e-06 
+## iteration:  42   gain: 6.0637e-06 
+## iteration:  43   gain: 4.5615e-06 
+## iteration:  44   gain: 1.5761e-06 
+## iteration:  45   gain: 7.1014e-07 
+## iteration:  46   gain: 1.5279e-06 
+## iteration:  47   gain: 1.2005e-06 
+## iteration:  48   gain: 4.4985e-07 
+## iteration:  49   gain: 1.5102e-07 
+## iteration:  50   gain: 3.8339e-07 
+## iteration:  51   gain: 3.1525e-07 
+## iteration:  52   gain: 1.2731e-07 
+## iteration:  53   gain: 3.0237e-08 
+## iteration:  54   gain: 9.5748e-08 
+## iteration:  55   gain: 8.2582e-08 
+## iteration:  56   gain: 3.5764e-08 
+## iteration:  57   gain: 5.4442e-09 
+## iteration:  58   gain: 2.3784e-08 
+## iteration:  59   gain: 2.1579e-08 
+## iteration:  60   gain: 9.9799e-09 
+## iteration:  61   gain: 7.6943e-10 
+## iteration:  62   gain: 5.8726e-09 
+## iteration:  63   gain: 5.6234e-09 
+## iteration:  64   gain: 2.7685e-09 
+## iteration:  65   gain: 2.8194e-11</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="code-to-reproduce-analysis-and-figures.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># linear discriminant analysis</span></span>
+<span id="cb15-2"><a href="code-to-reproduce-analysis-and-figures.html#cb15-2" aria-hidden="true" tabindex="-1"></a>outlinesLDA <span class="ot">&lt;-</span> <span class="fu">LDA</span>(outlinesPCA, <span class="st">&#39;Type&#39;</span>, <span class="at">retain =</span> <span class="dv">10</span>)</span>
+<span id="cb15-3"><a href="code-to-reproduce-analysis-and-figures.html#cb15-3" aria-hidden="true" tabindex="-1"></a>valid <span class="ot">&lt;-</span> outlinesLDA<span class="sc">$</span>CV.tab <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="code-to-reproduce-analysis-and-figures.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">valid =</span> actual <span class="sc">==</span> classified) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-5"><a href="code-to-reproduce-analysis-and-figures.html#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">uncount</span>(Freq) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-6"><a href="code-to-reproduce-analysis-and-figures.html#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">valid =</span> <span class="fu">sum</span>(valid) <span class="sc">/</span> <span class="fu">n</span>())</span>
+<span id="cb15-7"><a href="code-to-reproduce-analysis-and-figures.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># predictions table</span></span>
+<span id="cb15-8"><a href="code-to-reproduce-analysis-and-figures.html#cb15-8" aria-hidden="true" tabindex="-1"></a>tablePredictions <span class="ot">&lt;-</span> outlinesLDA<span class="sc">$</span>CV.tab <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-9"><a href="code-to-reproduce-analysis-and-figures.html#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">&#39;classified&#39;</span>,<span class="at">values_from =</span> <span class="st">&#39;Freq&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-10"><a href="code-to-reproduce-analysis-and-figures.html#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">accuracy =</span> <span class="fu">map_chr</span>(outlinesLDA<span class="sc">$</span>CV.ce,<span class="sc">~</span> <span class="fu">paste0</span>(<span class="fu">round</span>(.x <span class="sc">*</span> <span class="dv">100</span>,<span class="dv">0</span>),<span class="st">&quot;%&quot;</span>)))</span>
+<span id="cb15-11"><a href="code-to-reproduce-analysis-and-figures.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># clustering with UMAP</span></span>
+<span id="cb15-12"><a href="code-to-reproduce-analysis-and-figures.html#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1010</span>) <span class="co"># for reproducibility</span></span>
+<span id="cb15-13"><a href="code-to-reproduce-analysis-and-figures.html#cb15-13" aria-hidden="true" tabindex="-1"></a>outlinesRose <span class="ot">&lt;-</span> outlinesPCA <span class="sc">%&gt;%</span> </span>
+<span id="cb15-14"><a href="code-to-reproduce-analysis-and-figures.html#cb15-14" aria-hidden="true" tabindex="-1"></a>  Momocs<span class="sc">::</span><span class="fu">filter</span>(Type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Eastgate&quot;</span>,<span class="st">&quot;Rose Spring&quot;</span>))</span>
+<span id="cb15-15"><a href="code-to-reproduce-analysis-and-figures.html#cb15-15" aria-hidden="true" tabindex="-1"></a>outlinesUMAP <span class="ot">&lt;-</span> umap<span class="sc">::</span><span class="fu">umap</span>(outlinesRose<span class="sc">$</span>x,</span>
+<span id="cb15-16"><a href="code-to-reproduce-analysis-and-figures.html#cb15-16" aria-hidden="true" tabindex="-1"></a>                           <span class="at">labels =</span> <span class="fu">rownames</span>(outlinesRose<span class="sc">$</span>x[,<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]))</span>
+<span id="cb15-17"><a href="code-to-reproduce-analysis-and-figures.html#cb15-17" aria-hidden="true" tabindex="-1"></a>outlinesUMAPdf <span class="ot">&lt;-</span> outlinesUMAP<span class="sc">$</span>layout <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-18"><a href="code-to-reproduce-analysis-and-figures.html#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">&#39;Name&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-19"><a href="code-to-reproduce-analysis-and-figures.html#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-20"><a href="code-to-reproduce-analysis-and-figures.html#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clusterUMAP =</span> <span class="fu">factor</span>(<span class="fu">kmeans</span>(outlinesUMAP<span class="sc">$</span>layout,<span class="dv">2</span>)<span class="sc">$</span>cluster),</span>
+<span id="cb15-21"><a href="code-to-reproduce-analysis-and-figures.html#cb15-21" aria-hidden="true" tabindex="-1"></a>         <span class="at">clusterPCA =</span> <span class="fu">factor</span>(<span class="fu">kmeans</span>(outlinesRose<span class="sc">$</span>x,<span class="dv">2</span>)<span class="sc">$</span>cluster)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-22"><a href="code-to-reproduce-analysis-and-figures.html#cb15-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(outlinesRose<span class="sc">$</span>fac)</span></code></pre></div>
+</div>
+</div>
+<div id="table-1.-fremont-projectile-point-data-from-this-study" class="section level2">
+<h2>Table 1. Fremont Projectile Point Data from this Study</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="code-to-reproduce-analysis-and-figures.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#footnotes</span></span>
+<span id="cb16-2"><a href="code-to-reproduce-analysis-and-figures.html#cb16-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> </span>
+<span id="cb16-3"><a href="code-to-reproduce-analysis-and-figures.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;$^a$Bull Creek incorporates several site numbers: 42WN226, 42WN230, 42WN231, 42WN261, 42WN326, 42WN337, 42WN991, 42WN996.&#39;</span></span>
+<span id="cb16-4"><a href="code-to-reproduce-analysis-and-figures.html#cb16-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span>  </span>
+<span id="cb16-5"><a href="code-to-reproduce-analysis-and-figures.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;$^b$This site is composed of several mounds that were excavated and reported at different times.&#39;</span></span>
+<span id="cb16-6"><a href="code-to-reproduce-analysis-and-figures.html#cb16-6" aria-hidden="true" tabindex="-1"></a>footers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Bull Creek&#39;</span>,<span class="st">&#39;Hinckley Mounds 1 (42UT111)&#39;</span>)</span>
+<span id="cb16-7"><a href="code-to-reproduce-analysis-and-figures.html#cb16-7" aria-hidden="true" tabindex="-1"></a>c1 <span class="ot">&lt;-</span> <span class="fu">which</span>(projData<span class="sc">$</span>Site <span class="sc">==</span> footers[<span class="dv">1</span>]) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb16-8"><a href="code-to-reproduce-analysis-and-figures.html#cb16-8" aria-hidden="true" tabindex="-1"></a>c2 <span class="ot">&lt;-</span> <span class="fu">which</span>(projData<span class="sc">$</span>Site <span class="sc">==</span> footers[<span class="dv">2</span>]) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb16-9"><a href="code-to-reproduce-analysis-and-figures.html#cb16-9" aria-hidden="true" tabindex="-1"></a>t1 <span class="ot">&lt;-</span> projData <span class="sc">%&gt;%</span></span>
+<span id="cb16-10"><a href="code-to-reproduce-analysis-and-figures.html#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb16-11"><a href="code-to-reproduce-analysis-and-figures.html#cb16-11" aria-hidden="true" tabindex="-1"></a>    Site,</span>
+<span id="cb16-12"><a href="code-to-reproduce-analysis-and-figures.html#cb16-12" aria-hidden="true" tabindex="-1"></a>    Period,</span>
+<span id="cb16-13"><a href="code-to-reproduce-analysis-and-figures.html#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Total Projectile Points</span><span class="st">`</span>,</span>
+<span id="cb16-14"><a href="code-to-reproduce-analysis-and-figures.html#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Total Rosegate Points</span><span class="st">`</span>,</span>
+<span id="cb16-15"><a href="code-to-reproduce-analysis-and-figures.html#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Total Dart Points</span><span class="st">`</span>,</span>
+<span id="cb16-16"><a href="code-to-reproduce-analysis-and-figures.html#cb16-16" aria-hidden="true" tabindex="-1"></a>    References</span>
+<span id="cb16-17"><a href="code-to-reproduce-analysis-and-figures.html#cb16-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-18"><a href="code-to-reproduce-analysis-and-figures.html#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_hux</span>(<span class="at">add_colnames =</span> T) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-19"><a href="code-to-reproduce-analysis-and-figures.html#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_contents</span>(c1,<span class="dv">1</span>,<span class="fu">paste0</span>(footers[<span class="dv">1</span>],<span class="st">&quot;$^a$&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-20"><a href="code-to-reproduce-analysis-and-figures.html#cb16-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_contents</span>(c2,<span class="dv">1</span>,<span class="fu">paste0</span>(footers[<span class="dv">1</span>],<span class="st">&quot;$^b$&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-21"><a href="code-to-reproduce-analysis-and-figures.html#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_article</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb16-22"><a href="code-to-reproduce-analysis-and-figures.html#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add notes</span></span>
+<span id="cb16-23"><a href="code-to-reproduce-analysis-and-figures.html#cb16-23" aria-hidden="true" tabindex="-1"></a>  huxtable<span class="sc">::</span><span class="fu">add_footnote</span>(a) <span class="sc">%&gt;%</span></span>
+<span id="cb16-24"><a href="code-to-reproduce-analysis-and-figures.html#cb16-24" aria-hidden="true" tabindex="-1"></a>  huxtable<span class="sc">::</span><span class="fu">add_footnote</span>(b, <span class="at">border =</span> <span class="dv">0</span>) <span class="sc">%T&gt;%</span> </span>
+<span id="cb16-25"><a href="code-to-reproduce-analysis-and-figures.html#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_xlsx</span>(<span class="at">file =</span> <span class="st">&quot;Rosegate Table 1.xlsx&quot;</span>) <span class="sc">%T&gt;%</span></span>
+<span id="cb16-26"><a href="code-to-reproduce-analysis-and-figures.html#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_docx</span>(<span class="at">file =</span> <span class="st">&quot;Rosegate Table 1.docx&quot;</span>)</span></code></pre></div>
+</div>
+<div id="table-2.-numerical-summary-of-rosegate-projectile-points-by-period" class="section level2">
+<h2>Table 2. Numerical Summary of Rosegate Projectile Points by Period</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="code-to-reproduce-analysis-and-figures.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create table showing numerical descriptors by period.</span></span>
+<span id="cb17-2"><a href="code-to-reproduce-analysis-and-figures.html#cb17-2" aria-hidden="true" tabindex="-1"></a>t2 <span class="ot">&lt;-</span> projData <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="code-to-reproduce-analysis-and-figures.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">r =</span> <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>, <span class="at">t =</span> <span class="st">`</span><span class="at">Total Rosegate Points</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="code-to-reproduce-analysis-and-figures.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Period) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-5"><a href="code-to-reproduce-analysis-and-figures.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="st">`</span><span class="at">Number of sites</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>(),</span>
+<span id="cb17-6"><a href="code-to-reproduce-analysis-and-figures.html#cb17-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Total Rosegate points</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(t),</span>
+<span id="cb17-7"><a href="code-to-reproduce-analysis-and-figures.html#cb17-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Total Rosegate %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(t)<span class="sc">/</span><span class="fu">sum</span>(ArrowPoints)<span class="sc">*</span><span class="dv">100</span>,</span>
+<span id="cb17-8"><a href="code-to-reproduce-analysis-and-figures.html#cb17-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Mean site %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(r),</span>
+<span id="cb17-9"><a href="code-to-reproduce-analysis-and-figures.html#cb17-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Median site %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">median</span>(r),</span>
+<span id="cb17-10"><a href="code-to-reproduce-analysis-and-figures.html#cb17-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Minimum site %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">min</span>(r),</span>
+<span id="cb17-11"><a href="code-to-reproduce-analysis-and-figures.html#cb17-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Maximum site %</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">max</span>(r)) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-12"><a href="code-to-reproduce-analysis-and-figures.html#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(Statistic, Value, <span class="sc">-</span>Period) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-13"><a href="code-to-reproduce-analysis-and-figures.html#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Period) <span class="sc">%&gt;%</span></span>
+<span id="cb17-14"><a href="code-to-reproduce-analysis-and-figures.html#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">spread</span>(Period,Value) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-15"><a href="code-to-reproduce-analysis-and-figures.html#cb17-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric,round,<span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-16"><a href="code-to-reproduce-analysis-and-figures.html#cb17-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-17"><a href="code-to-reproduce-analysis-and-figures.html#cb17-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_hux</span>(<span class="at">add_colnames =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-18"><a href="code-to-reproduce-analysis-and-figures.html#cb17-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_article</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb17-19"><a href="code-to-reproduce-analysis-and-figures.html#cb17-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_align</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>,<span class="st">&quot;right&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-20"><a href="code-to-reproduce-analysis-and-figures.html#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_contents</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="st">&quot;&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-21"><a href="code-to-reproduce-analysis-and-figures.html#cb17-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_number_format</span>(everywhere,<span class="dv">4</span>,<span class="fu">fmt_pretty</span>()) <span class="sc">%T&gt;%</span> </span>
+<span id="cb17-22"><a href="code-to-reproduce-analysis-and-figures.html#cb17-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_xlsx</span>(<span class="at">file =</span> <span class="st">&quot;Rosegate Table 2.xlsx&quot;</span>) <span class="sc">%T&gt;%</span> </span>
+<span id="cb17-23"><a href="code-to-reproduce-analysis-and-figures.html#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_docx</span>(<span class="at">file =</span> <span class="st">&quot;Rosegate Table 2.docx&quot;</span>)</span></code></pre></div>
+</div>
+<div id="table-4.-actual-vs-predicted-results-from-a-linear-discriminants-analysis" class="section level2">
+<h2>Table 4. Actual vs Predicted Results from a Linear Discriminants Analysis</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="code-to-reproduce-analysis-and-figures.html#cb18-1" aria-hidden="true" tabindex="-1"></a>t4 <span class="ot">&lt;-</span> tablePredictions <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="code-to-reproduce-analysis-and-figures.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_hux</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a href="code-to-reproduce-analysis-and-figures.html#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_row</span>(<span class="fu">c</span>(<span class="st">&#39;&#39;</span>,<span class="st">&#39;predicted type&#39;</span>), <span class="at">after =</span> <span class="dv">0</span>, <span class="at">fill =</span> <span class="st">&quot;&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-4"><a href="code-to-reproduce-analysis-and-figures.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">insert_column</span>(<span class="fu">c</span>(<span class="st">&#39;&#39;</span>,<span class="st">&#39;&#39;</span>,<span class="st">&#39;actual type&#39;</span>), <span class="at">after =</span> <span class="dv">0</span>, <span class="at">fill =</span> <span class="st">&quot;&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-5"><a href="code-to-reproduce-analysis-and-figures.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_contents</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="st">&quot;&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-6"><a href="code-to-reproduce-analysis-and-figures.html#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">merge_cells</span>(<span class="dv">1</span>,<span class="dv">3</span><span class="sc">:</span>(<span class="fu">ncol</span>(tablePredictions) <span class="sc">+</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-7"><a href="code-to-reproduce-analysis-and-figures.html#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">merge_cells</span>(<span class="dv">3</span><span class="sc">:</span>(<span class="fu">nrow</span>(tablePredictions) <span class="sc">+</span> <span class="dv">1</span>),<span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-8"><a href="code-to-reproduce-analysis-and-figures.html#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_align</span>(<span class="dv">1</span>, <span class="dv">2</span><span class="sc">:</span><span class="fu">ncol</span>(tablePredictions), <span class="st">&quot;center&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-9"><a href="code-to-reproduce-analysis-and-figures.html#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_align</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">nrow</span>(tablePredictions), <span class="dv">1</span>, <span class="st">&quot;center&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-10"><a href="code-to-reproduce-analysis-and-figures.html#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_bold</span>(<span class="dv">1</span>, <span class="dv">2</span><span class="sc">:</span><span class="fu">ncol</span>(tablePredictions)) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-11"><a href="code-to-reproduce-analysis-and-figures.html#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_bold</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">nrow</span>(tablePredictions), <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-12"><a href="code-to-reproduce-analysis-and-figures.html#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_rotation</span>(<span class="dv">2</span><span class="sc">:</span>(<span class="fu">nrow</span>(tablePredictions) <span class="sc">+</span> <span class="dv">2</span>), <span class="dv">1</span>,<span class="dv">90</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-13"><a href="code-to-reproduce-analysis-and-figures.html#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_article</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-14"><a href="code-to-reproduce-analysis-and-figures.html#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_right_border</span>(<span class="dv">3</span><span class="sc">:</span>(<span class="fu">nrow</span>(tablePredictions) <span class="sc">+</span> <span class="dv">2</span>), <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-15"><a href="code-to-reproduce-analysis-and-figures.html#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_bottom_border</span>(<span class="fu">nrow</span>(tablePredictions) <span class="sc">+</span> <span class="dv">2</span>, <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-16"><a href="code-to-reproduce-analysis-and-figures.html#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_bottom_border</span>(<span class="dv">1</span>,<span class="dv">3</span><span class="sc">:</span>(<span class="fu">ncol</span>(tablePredictions) <span class="sc">+</span> <span class="dv">1</span>)) <span class="sc">%T&gt;%</span> </span>
+<span id="cb18-17"><a href="code-to-reproduce-analysis-and-figures.html#cb18-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_xlsx</span>(<span class="at">file =</span> <span class="st">&#39;Rosegate Table 4.xlsx&#39;</span>) <span class="sc">%T&gt;%</span> </span>
+<span id="cb18-18"><a href="code-to-reproduce-analysis-and-figures.html#cb18-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_docx</span>(<span class="at">file =</span> <span class="st">&#39;Rosegate Table 4.docx&#39;</span>)</span></code></pre></div>
+</div>
+<div id="supplemental-table-1" class="section level2">
+<h2>Supplemental Table 1</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="code-to-reproduce-analysis-and-figures.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save Radiocarbon table</span></span>
+<span id="cb19-2"><a href="code-to-reproduce-analysis-and-figures.html#cb19-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fu">nrow</span>(radiocarbonData) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb19-3"><a href="code-to-reproduce-analysis-and-figures.html#cb19-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="fu">ncol</span>(radiocarbonData)</span>
+<span id="cb19-4"><a href="code-to-reproduce-analysis-and-figures.html#cb19-4" aria-hidden="true" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fu">as_hux</span>(radiocarbonData, <span class="at">add_colnames =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-5"><a href="code-to-reproduce-analysis-and-figures.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_top_border</span>(<span class="dv">1</span>,<span class="dv">1</span><span class="sc">:</span>n,<span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-6"><a href="code-to-reproduce-analysis-and-figures.html#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_bottom_border</span>(<span class="dv">1</span>,<span class="dv">1</span><span class="sc">:</span>n,<span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-7"><a href="code-to-reproduce-analysis-and-figures.html#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_bottom_border</span>(r,<span class="dv">1</span><span class="sc">:</span>n,<span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-8"><a href="code-to-reproduce-analysis-and-figures.html#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_align</span>(<span class="dv">1</span><span class="sc">:</span>r,<span class="dv">2</span><span class="sc">:</span>n,<span class="st">&quot;right&quot;</span>) <span class="sc">%T&gt;%</span></span>
+<span id="cb19-9"><a href="code-to-reproduce-analysis-and-figures.html#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_xlsx</span>(<span class="at">file =</span> <span class="st">&quot;Rosegate Supplemental Table 1.xlsx&quot;</span>) <span class="sc">%T&gt;%</span></span>
+<span id="cb19-10"><a href="code-to-reproduce-analysis-and-figures.html#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">quick_docx</span>(<span class="at">file =</span> <span class="st">&quot;Rosegate Supplemental Table 1.docx&quot;</span>)</span></code></pre></div>
+</div>
+<div id="figure-4.-histogram-of-radiocarbon-dates-used-in-this-study." class="section level2">
+<h2>Figure 4. Histogram of radiocarbon dates used in this study.</h2>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="code-to-reproduce-analysis-and-figures.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># histogram</span></span>
+<span id="cb20-2"><a href="code-to-reproduce-analysis-and-figures.html#cb20-2" aria-hidden="true" tabindex="-1"></a>dateEstimates <span class="sc">%&gt;%</span> </span>
+<span id="cb20-3"><a href="code-to-reproduce-analysis-and-figures.html#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb20-4"><a href="code-to-reproduce-analysis-and-figures.html#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(ADMedian) <span class="sc">+</span></span>
+<span id="cb20-5"><a href="code-to-reproduce-analysis-and-figures.html#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">15</span>, <span class="at">color =</span> <span class="st">&#39;white&#39;</span>) <span class="sc">+</span></span>
+<span id="cb20-6"><a href="code-to-reproduce-analysis-and-figures.html#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_gdocs</span>() <span class="sc">+</span></span>
+<span id="cb20-7"><a href="code-to-reproduce-analysis-and-figures.html#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Year AD&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb20-8"><a href="code-to-reproduce-analysis-and-figures.html#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Radiocarbon dates&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="code-to-reproduce-analysis-and-figures.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&#39;Rosegate Figure 4.jpg&#39;</span>,</span>
+<span id="cb21-2"><a href="code-to-reproduce-analysis-and-figures.html#cb21-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="fl">4.5</span>, <span class="at">width =</span> <span class="fl">6.26</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+</div>
+<div id="figure-5.-radiocarbon-dates-by-median-date." class="section level2">
+<h2>Figure 5. Radiocarbon dates by median date.</h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="code-to-reproduce-analysis-and-figures.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb22-2"><a href="code-to-reproduce-analysis-and-figures.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> dateEstimatesMedian,</span>
+<span id="cb22-3"><a href="code-to-reproduce-analysis-and-figures.html#cb22-3" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="fu">jitter</span>(ADMedian, <span class="at">factor =</span> <span class="dv">10</span>),</span>
+<span id="cb22-4"><a href="code-to-reproduce-analysis-and-figures.html#cb22-4" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">reorder</span>(<span class="st">`</span><span class="at">Site Name</span><span class="st">`</span>,ADMedian),</span>
+<span id="cb22-5"><a href="code-to-reproduce-analysis-and-figures.html#cb22-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>,</span>
+<span id="cb22-6"><a href="code-to-reproduce-analysis-and-figures.html#cb22-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">shape =</span> Annual), <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="code-to-reproduce-analysis-and-figures.html#cb22-7" aria-hidden="true" tabindex="-1"></a>  theme_dotplot <span class="sc">+</span> </span>
+<span id="cb22-8"><a href="code-to-reproduce-analysis-and-figures.html#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Year AD&#39;</span>) <span class="sc">+</span></span>
+<span id="cb22-9"><a href="code-to-reproduce-analysis-and-figures.html#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span></span>
+<span id="cb22-10"><a href="code-to-reproduce-analysis-and-figures.html#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-11"><a href="code-to-reproduce-analysis-and-figures.html#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>,<span class="dv">24</span>)) <span class="sc">+</span></span>
+<span id="cb22-12"><a href="code-to-reproduce-analysis-and-figures.html#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_colorbar</span>(<span class="st">&#39;Rosegate %&#39;</span>), <span class="at">shape =</span> <span class="fu">guide_legend</span>(<span class="st">&#39;&#39;</span>)) <span class="sc">+</span></span>
+<span id="cb22-13"><a href="code-to-reproduce-analysis-and-figures.html#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;bottom&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="code-to-reproduce-analysis-and-figures.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&#39;Rosegate Figure 5.jpg&#39;</span>,</span>
+<span id="cb23-2"><a href="code-to-reproduce-analysis-and-figures.html#cb23-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="fl">4.5</span>, <span class="at">width =</span> <span class="fl">6.26</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+</div>
+<div id="figure-6.-rosegate-percentages-and-median-calibrated-radiocarbon-date" class="section level2">
+<h2>Figure 6. Rosegate percentages and median calibrated radiocarbon date</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="code-to-reproduce-analysis-and-figures.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dateEstimatesMedian, <span class="fu">aes</span>(ADMedian, <span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="code-to-reproduce-analysis-and-figures.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb24-3"><a href="code-to-reproduce-analysis-and-figures.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_gdocs</span>() <span class="sc">+</span></span>
+<span id="cb24-4"><a href="code-to-reproduce-analysis-and-figures.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;Year AD&#39;</span>) <span class="sc">+</span></span>
+<span id="cb24-5"><a href="code-to-reproduce-analysis-and-figures.html#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;Rosegate %&#39;</span>) <span class="sc">+</span></span>
+<span id="cb24-6"><a href="code-to-reproduce-analysis-and-figures.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="code-to-reproduce-analysis-and-figures.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&#39;Rosegate Figure 6.jpg&#39;</span>,</span>
+<span id="cb25-2"><a href="code-to-reproduce-analysis-and-figures.html#cb25-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="fl">4.5</span>, <span class="at">width =</span> <span class="fl">6.23</span>, <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+</div>
+<div id="figure-7.-dot-plot-showing-the-percentage-of-rosegate-points-to-arrow-points." class="section level2">
+<h2>Figure 7. Dot plot showing the percentage of Rosegate points to arrow points.</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="code-to-reproduce-analysis-and-figures.html#cb26-1" aria-hidden="true" tabindex="-1"></a>projData <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="code-to-reproduce-analysis-and-figures.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb26-3"><a href="code-to-reproduce-analysis-and-figures.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>,</span>
+<span id="cb26-4"><a href="code-to-reproduce-analysis-and-figures.html#cb26-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">reorder</span>(Site,<span class="st">`</span><span class="at">Rosegate % of Arrow Points</span><span class="st">`</span>),</span>
+<span id="cb26-5"><a href="code-to-reproduce-analysis-and-figures.html#cb26-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">shape =</span> Period, <span class="at">fill =</span> Period) <span class="sc">+</span></span>
+<span id="cb26-6"><a href="code-to-reproduce-analysis-and-figures.html#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
+<span id="cb26-7"><a href="code-to-reproduce-analysis-and-figures.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  theme_dotplot <span class="sc">+</span> </span>
+<span id="cb26-8"><a href="code-to-reproduce-analysis-and-figures.html#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Rosegate %&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-9"><a href="code-to-reproduce-analysis-and-figures.html#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-10"><a href="code-to-reproduce-analysis-and-figures.html#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb26-11"><a href="code-to-reproduce-analysis-and-figures.html#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>,<span class="dv">22</span>,<span class="dv">24</span>)) <span class="sc">+</span> </span>
+<span id="cb26-12"><a href="code-to-reproduce-analysis-and-figures.html#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(.<span class="dv">85</span>, .<span class="dv">17</span>),</span>
+<span id="cb26-13"><a href="code-to-reproduce-analysis-and-figures.html#cb26-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb26-14"><a href="code-to-reproduce-analysis-and-figures.html#cb26-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="552" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="code-to-reproduce-analysis-and-figures.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;Rosegate Figure 7.jpg&quot;</span>, <span class="at">width =</span> <span class="fl">6.26</span>, <span class="at">height =</span> <span class="dv">5</span>, <span class="at">units =</span> <span class="st">&quot;in&quot;</span>,</span>
+<span id="cb27-2"><a href="code-to-reproduce-analysis-and-figures.html#cb27-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">dpi =</span> <span class="dv">600</span>)</span></code></pre></div>
+</div>
+<div id="figure-10.-principal-components-analysis" class="section level2">
+<h2>Figure 10. Principal components analysis</h2>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="code-to-reproduce-analysis-and-figures.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="st">&#39;Rosegate Figure 10.jpg&#39;</span>, </span>
+<span id="cb28-2"><a href="code-to-reproduce-analysis-and-figures.html#cb28-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">width =</span> <span class="fl">6.26</span>, <span class="at">height =</span> <span class="dv">4</span>, <span class="at">units =</span> <span class="st">&#39;in&#39;</span>,</span>
+<span id="cb28-3"><a href="code-to-reproduce-analysis-and-figures.html#cb28-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">res =</span> <span class="dv">600</span>)</span>
+<span id="cb28-4"><a href="code-to-reproduce-analysis-and-figures.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_PCA</span>(outlinesPCA, <span class="at">axes =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">zoom =</span> <span class="dv">1</span>, <span class="sc">~</span>Type, <span class="at">labelpoints =</span> F,</span>
+<span id="cb28-5"><a href="code-to-reproduce-analysis-and-figures.html#cb28-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">palette =</span> viridis<span class="sc">::</span>viridis)</span>
+<span id="cb28-6"><a href="code-to-reproduce-analysis-and-figures.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<pre><code>## png 
+##   2</code></pre>
+</div>
+<div id="figure-11.-umap" class="section level2">
+<h2>Figure 11. UMAP</h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="code-to-reproduce-analysis-and-figures.html#cb30-1" aria-hidden="true" tabindex="-1"></a>outlinesUMAPdf <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="code-to-reproduce-analysis-and-figures.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(V1,V2,</span>
+<span id="cb30-3"><a href="code-to-reproduce-analysis-and-figures.html#cb30-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> clusterUMAP,</span>
+<span id="cb30-4"><a href="code-to-reproduce-analysis-and-figures.html#cb30-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">shape =</span> Type, <span class="at">label =</span> Name)) <span class="sc">+</span> </span>
+<span id="cb30-5"><a href="code-to-reproduce-analysis-and-figures.html#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb30-6"><a href="code-to-reproduce-analysis-and-figures.html#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>,<span class="dv">24</span>)) <span class="sc">+</span></span>
+<span id="cb30-7"><a href="code-to-reproduce-analysis-and-figures.html#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="st">&#39;Cluster&#39;</span>,</span>
+<span id="cb30-8"><a href="code-to-reproduce-analysis-and-figures.html#cb30-8" aria-hidden="true" tabindex="-1"></a>                             <span class="at">ncol =</span> <span class="dv">2</span>,</span>
+<span id="cb30-9"><a href="code-to-reproduce-analysis-and-figures.html#cb30-9" aria-hidden="true" tabindex="-1"></a>                             <span class="at">byrow =</span> T,</span>
+<span id="cb30-10"><a href="code-to-reproduce-analysis-and-figures.html#cb30-10" aria-hidden="true" tabindex="-1"></a>                             <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="dv">21</span>)),</span>
+<span id="cb30-11"><a href="code-to-reproduce-analysis-and-figures.html#cb30-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">shape =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>,</span>
+<span id="cb30-12"><a href="code-to-reproduce-analysis-and-figures.html#cb30-12" aria-hidden="true" tabindex="-1"></a>                              <span class="at">byrow =</span> T)) <span class="sc">+</span></span>
+<span id="cb30-13"><a href="code-to-reproduce-analysis-and-figures.html#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb30-14"><a href="code-to-reproduce-analysis-and-figures.html#cb30-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span></span>
+<span id="cb30-15"><a href="code-to-reproduce-analysis-and-figures.html#cb30-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span></span>
+<span id="cb30-16"><a href="code-to-reproduce-analysis-and-figures.html#cb30-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;bottom&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="code-to-reproduce-analysis-and-figures.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&#39;Rosegate Figure 11.jpg&#39;</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">width =</span> <span class="fl">6.26</span>, <span class="at">units =</span> <span class="st">&#39;in&#39;</span>)</span></code></pre></div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.mobi", "_main.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

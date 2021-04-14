@@ -2,7 +2,9 @@
 title: "Rosegate Projectile Points in the Fremont Region"
 output: 
   rticles::arxiv_article:
+    number_sections: false
   bookdown::gitbook:
+always_allow_html: true
 author:
    - name: "Robert J. Bischoff^[School of Human Evolution and Social Change, Arizona State University, rbischoff@asu.edu]"
    - name: "James R. Allison^[Department of Anthropology, Brigham Young University]"
@@ -18,6 +20,8 @@ authors:
     affiliation: "Brigham Young University"
 keywords:
   - Rosegate
+  - Rose Spring Corner-notched
+  - Eastgate Expanding-stem
   - Projectile points
   - Fremont
   - Geometric Morphometrics
@@ -30,15 +34,15 @@ graphics: yes
 ---
 
 ```{r setup, include = F}
-# knitr::opts_chunk$set(echo = F,warning = FALSE, message = FALSE,
-                      # fig.align = 'center')
+knitr::opts_chunk$set(echo = F,warning = FALSE, message = FALSE,
+                      fig.align = 'center')
 # change output depending on document type
-# if(knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"){
-  # tblText = 12
-# } else {
-  # knitr::opts_chunk$set(out.width = "6.26in")
+if(knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"){
+  tblText = 12
+} else {
+  knitr::opts_chunk$set(out.width = "6.26in")
   tblText = 10
-# }
+}
 library(tidyverse)
 library(magrittr)
 library(rio)
@@ -268,18 +272,17 @@ knitr::include_graphics('Rosegate Figure 3.jpg')
 
 ```{r }
 t1 <- import('Rosegate Table 1.xlsx') %>% 
-slice(-24,-25)
+  slice(-24,-25)
 a <- 
-'$^a$Bull Creek incorporates several site numbers: 42WN226, 42WN230, 42WN231, 42WN261, 42WN326, 42WN337, 42WN991, 42WN996.'
+  '$^a$Bull Creek incorporates several site numbers: 42WN226, 42WN230, 42WN231, 42WN261, 42WN326, 42WN337, 42WN991, 42WN996.'
 b <-  
-'$^b$This site is composed of several mounds that were excavated and reported at different times.'
+  '$^b$This site is composed of several mounds that were excavated and reported at different times.'
 t1 %>% 
-kable(booktabs = T, caption = captions[2],
-escape = F) %>%
-kable_styling(latex_options = c("repeat_header"), font_size = tblText) %>%
-landscape() %>% 
-column_spec(column = 5:6,width = '10em') %>% 
-footnote(c(a,b),escape = F)
+  kable(booktabs = T, caption = captions[2],escape = F) %>%
+  kable_styling(latex_options = c("repeat_header"), font_size = tblText) %>%
+  landscape() %>% 
+  column_spec(column = 5:6,width = '10em') %>% 
+  kableExtra::footnote(c(a,b),escape = F)
 ```
 
 To evaluate the chronology, we compiled a database of 218 radiocarbon
@@ -342,8 +345,8 @@ knitr::include_graphics('Rosegate Figure 7.jpg')
 t2 <- import('Rosegate Table 2.xlsx')
 names(t2)[1] <- ' '
 t2 %>% 
-kable(booktabs = T, caption = captions[3]) %>%
-kable_styling(font_size = tblText,full_width = F, position = "center")
+  kable(booktabs = T, caption = captions[3]) %>%
+  kable_styling(font_size = tblText,full_width = F, position = "center")
 ```
 
 Only three sites in the dataset are assigned to the early period:
