@@ -1,0 +1,27 @@
+---
+title: "Rosegate Projectile Points in the Fremont Region"
+output: 
+  bookdown::gitbook:
+always_allow_html: true
+author:
+   - name: "Robert J. Bischoff^[School of Human Evolution and Social Change, Arizona State University, rbischoff@asu.edu]"
+   - name: "James R. Allison^[Department of Anthropology, Brigham Young University]"
+date: "`r as.Date(Sys.time())`"
+keywords:
+  - Rosegate
+  - Rose Spring Corner-notched
+  - Eastgate Expanding-stem
+  - Projectile points
+  - Fremont
+  - Geometric Morphometrics
+biblio-style: unsrt
+abstract: 'The Fremont projectile point typology was developed in the 1980s. An early revision combined the Rose Spring Corner-notched and Eastgate Expanding-stem types into a combined Rosegate type with an end date of AD 900-1000. Some archaeologists recognize that these projectile points persist to approximately AD 1300 but others use the earlier date range, and much of the relevant information is confined to gray literature. Furthermore, there is a varied approach to these types. Some use the original two types, while others use Rosegate or a combination of Rosegate, Rose Spring, and Eastgate. We used projectile point typology data, illustrations, and photographs to study the temporal range and morphological variation of Rosegate points. We find that Rosegate points were in common use for the duration of the Fremont period (ca. AD 1300), with some decline over time. A spatial analysis demonstrates that the points are widespread in the Fremont region but are not evenly distributed. Our morphological analysis does not support the separation of Rosegate points into two distinct types.'
+bibliography: References from Rosegate Projectile Points in the Fremont Region.bib
+nocite: '@*'
+csl: saa.csl
+graphics: yes
+---
+
+# Notice
+
+This is a preprint published in bookdown for easier reading in addition to the pdf. 

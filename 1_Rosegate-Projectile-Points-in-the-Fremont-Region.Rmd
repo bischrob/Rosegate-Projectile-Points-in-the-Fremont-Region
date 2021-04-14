@@ -3,12 +3,7 @@ title: "Rosegate Projectile Points in the Fremont Region"
 output: 
   rticles::arxiv_article:
     number_sections: false
-  bookdown::gitbook:
 always_allow_html: true
-author:
-   - name: "Robert J. Bischoff^[School of Human Evolution and Social Change, Arizona State University, rbischoff@asu.edu]"
-   - name: "James R. Allison^[Department of Anthropology, Brigham Young University]"
-date: "`r as.Date(Sys.time())`"
 authors:
   - name: "Robert J. Bischoff"
     department: "School of Human Evolution and Social Change"
