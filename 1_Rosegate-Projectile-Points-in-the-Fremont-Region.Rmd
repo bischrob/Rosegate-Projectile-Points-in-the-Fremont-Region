@@ -32,12 +32,14 @@ graphics: yes
 knitr::opts_chunk$set(echo = F,warning = FALSE, message = FALSE,
                       fig.align = 'center')
 # change output depending on document type
-if(knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"){
-  tblText = 12
-} else {
-  knitr::opts_chunk$set(out.width = "6.26in")
-  tblText = 10
-}
+try({
+  if(knitr::opts_knit$get("rmarkdown.pandoc.to") == "html"){
+    tblText = 12
+  } else {
+    knitr::opts_chunk$set(out.width = "6.26in")
+    tblText = 10
+  }
+})
 library(tidyverse)
 library(magrittr)
 library(rio)
