@@ -1,0 +1,14 @@
+Package: RosegateProjectilePoints
+Title: Data and scripts for the publication "Rosegate Projectile Points in the Fremont Region"
+Version: 1.0
+Authors@R: 
+    person("Robert", "Bischoff", , "rbischoff@asu.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8708-9041"))
+Description: This package contains the data and scripts necessary to reproduce the analyses described in the paper "Rosegate Projectile Points in the Fremont Region" by Robert J. Bischoff and James R. Allison. The paperis published in Utah Archaeology issue 1 volume 33 (pages 7-48). It can be found online as a preprint at the following url: https://doi.org/10.31235/osf.io/dwrba
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+LazyData: true

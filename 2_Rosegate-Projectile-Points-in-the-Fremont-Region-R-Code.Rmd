@@ -21,7 +21,6 @@ keywords:
 output: 
   bookdown::gitbook
   rticles::arxiv_article
-
 graphics: yes
 editor_options: 
   chunk_output_type: console
